@@ -1,34 +1,12 @@
 const express = require("express");
 const cors = require("cors");
+
+const { readdirSync } = require("fs");
 const app = express();
 
-let allowed = ["http://localhost:3000", "other links"];
+app.use(cors());
 
-function option(req, res) {
-	let tmp;
-	let origin = req.header("Origin");
-	if (allowed.indexOf(origin) > -1) {
-		tmp = {
-			origin: true,
-			optionSuccessStatus: 200,
-		};
-	} else {
-		tmp = {
-			origin: "do not exist",
-		};
-	}
-	res(null, tmp);
-}
-
-app.use(cors(option));
-
-app.get("/", (req, res) => {
-	res.send("Server is ok. This is the home page.");
-});
-
-app.get("/test", (req, res) => {
-	res.send("This is the test page");
-});
+readdirSync("./routes").map((r) => app.use("/", require("./routes/" + r)));
 
 app.listen(8000, () => {
 	console.log("Server is listening.");
