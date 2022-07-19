@@ -17,7 +17,7 @@
 
 #
 
-<h3>Backend NodeJS installations:</h3>
+<h3>Backend installations:</h3>
 
 <p><b>npm init</b> -> initialize NodeJS</p>
 <p><b>npm i express</b> -> install ExpressJS</p>
@@ -25,3 +25,4 @@
 <p><b>npm i cors</b> -> install CORS (Cross Origin Resource Sharing is a NodeJS package that adds a layer of security to the api/server limiting who can access it or limiting who can access a certain route)</p>
 <p><b>npm i dotenv</b> -> used to process .env files inside JS files</p>
 <p><b>npm i mongodb mongoose</b> -> used to connect to the database (MongoDB)</p>
+<p><b>npm i bcrypt</b> -> used encrypt passwords</p>
