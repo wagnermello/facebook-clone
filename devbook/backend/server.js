@@ -18,7 +18,7 @@ mongoose
 	.connect(process.env.DATABASE_URL, {
 		useNewUrlParser: true,
 	})
-	.then(() => console.log("Database connected successfuly"))
+	.then(() => console.log("Database connected successfully"))
 	.catch((err) => console.log("Error to conect to MongoDB.\n", err));
 
 const PORT = process.env.PORT || 8000;

@@ -6,36 +6,38 @@ const userSchema = mongoose.Schema(
 	{
 		first_name: {
 			type: String,
-			requires: [true, "first name is required."],
+			required: [true, "first name is required"],
 			trim: true,
 			text: true,
 		},
 		last_name: {
 			type: String,
-			requires: [true, "last name is required."],
+			required: [true, "last name is required"],
 			trim: true,
 			text: true,
 		},
 		username: {
 			type: String,
-			requires: [true, "username is required."],
+			required: [true, "username is required"],
 			trim: true,
 			text: true,
 			unique: true,
 		},
+
 		email: {
 			type: String,
-			requires: [true, "email is required."],
+			required: [true, "email is required"],
 			trim: true,
 		},
 		password: {
 			type: String,
-			requires: [true, "password is required."],
+			required: [true, "password is required"],
 		},
 		picture: {
 			type: String,
 			trim: true,
-			///////default: "CLOUDINARY PROFILE PICK"
+			default:
+				"https://res.cloudinary.com/dmhcnhtng/image/upload/v1643044376/avatars/default_pic_jeaybr.png",
 		},
 		cover: {
 			type: String,
@@ -43,7 +45,22 @@ const userSchema = mongoose.Schema(
 		},
 		gender: {
 			type: String,
-			requires: [true, "gender is required"],
+			required: [true, "gender is required"],
+			trim: true,
+		},
+		bYear: {
+			type: Number,
+			required: true,
+			trim: true,
+		},
+		bMonth: {
+			type: Number,
+			required: true,
+			trim: true,
+		},
+		bDay: {
+			type: Number,
+			required: true,
 			trim: true,
 		},
 		verified: {
@@ -51,19 +68,19 @@ const userSchema = mongoose.Schema(
 			default: false,
 		},
 		friends: {
-			type: Boolean,
+			type: Array,
 			default: [],
 		},
 		following: {
-			type: Boolean,
+			type: Array,
 			default: [],
 		},
 		followers: {
-			type: Boolean,
+			type: Array,
 			default: [],
 		},
 		requests: {
-			type: Boolean,
+			type: Array,
 			default: [],
 		},
 		search: [
@@ -96,7 +113,7 @@ const userSchema = mongoose.Schema(
 			currentCity: {
 				type: String,
 			},
-			homeTown: {
+			hometown: {
 				type: String,
 			},
 			relationship: {
@@ -107,7 +124,7 @@ const userSchema = mongoose.Schema(
 				type: String,
 			},
 		},
-		savedPost: [
+		savedPosts: [
 			{
 				post: {
 					type: ObjectId,
