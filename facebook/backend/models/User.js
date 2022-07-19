@@ -102,10 +102,10 @@ const useSchema = mongoose.Schema(
 			},
 			relationship: {
 				type: String,
+				enum: ["Single", "In a relationship", "Married", "Divorced"],
 			},
 			instagram: {
 				type: String,
-				enum: ["Single", "In a relationship", "Married", "Divorced"],
 			},
 		},
 		savedPost: [
