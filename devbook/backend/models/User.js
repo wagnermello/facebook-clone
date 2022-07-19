@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const { ObjectId } = mongoose.Schema;
 
-const useSchema = mongoose.Schema(
+const userSchema = mongoose.Schema(
 	{
 		first_name: {
 			type: String,
@@ -125,4 +125,4 @@ const useSchema = mongoose.Schema(
 	}
 );
 
-module.exports = mongoose.model("User", useSchema);
+module.exports = mongoose.model("User", userSchema);
