@@ -3,10 +3,11 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
-
 const { readdirSync } = require("fs");
+
 const app = express();
 app.use(cors());
+app.use(express.json);
 
 //routes
 readdirSync("./routes").map((r) => app.use("/", require("./routes/" + r)));
