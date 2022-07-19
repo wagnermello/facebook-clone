@@ -1,3 +1,6 @@
 exports.home = (req, res) => {
-	res.send("Welcome to user home page!");
+	res.json({
+		message: "test message",
+		error: "test error",
+	});
 };
