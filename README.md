@@ -27,3 +27,5 @@
 <p><b>npm i mongodb mongoose</b> -> used to connect to the database (MongoDB)</p>
 <p><b>npm i bcrypt</b> -> used to encrypt passwords</p>
 <p><b>npm i jsonwebtoken</b> -> used to create json web tokens</p>
+<p><b>npm i googleapis</b> -> connect to google apis</p>
+<p><b>npm i nodemailer</b> -> e-mail sending from NodeJS applications</p>
