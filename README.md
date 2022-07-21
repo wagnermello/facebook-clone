@@ -17,7 +17,7 @@
 
 #
 
-<h3>Backend installations:</h3>
+<h3>Backend packages:</h3>
 
 <p><b>npm init</b> -> initialize NodeJS</p>
 <p><b>npm i express</b> -> install ExpressJS</p>
@@ -29,3 +29,12 @@
 <p><b>npm i jsonwebtoken</b> -> used to create json web tokens</p>
 <p><b>npm i googleapis</b> -> connect to google apis</p>
 <p><b>npm i nodemailer</b> -> e-mail sending from NodeJS applications</p>
+
+#
+
+<h3>Frontend packages:</h3>
+
+<p><b>npm i react-router-dom</b> -> used to create app routes</p>
+<p><b>npm i sass</b> -> install sass</p>
+<p><b>npm i redux react-redux redux-devtools-extension</b> -> install redux library</p>
+<p><b>npm i formik yup</b> -> install formik to create forms</p>
