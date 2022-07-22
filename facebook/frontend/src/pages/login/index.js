@@ -2,6 +2,7 @@ import { Form, Formik } from "formik";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import LoginInput from "../../components/inputs/loginInput";
+import * as Yup from "yup";
 import "./login.scss";
 
 const loginInfos = {
@@ -10,11 +11,19 @@ const loginInfos = {
 };
 export default function Login() {
 	const [login, setLogin] = useState(loginInfos);
-	const { email, passowrd } = login;
+	const { email, password } = login;
 	const handleLoginChange = (e) => {
 		const { name, value } = e.target;
 		setLogin({ ...login, [name]: value });
 	};
+
+	const loginValidation = Yup.object({
+		email: Yup.string()
+			.required("Email address is required.")
+			.email("Must be a valid email.")
+			.max(100),
+		password: Yup.string().required("Password is required"),
+	});
 
 	return (
 		<div className="login">
@@ -32,16 +41,17 @@ export default function Login() {
 							<Formik
 								enableReinitialize
 								initialValues={{
-									email: "",
-									password: "",
+									email,
+									password,
 								}}
+								validationSchema={loginValidation}
 							>
 								{(formik) => (
 									<Form>
 										<LoginInput
 											type="text"
 											name="email"
-											placeholder="Email adress or phone number"
+											placeholder="Email address or phone number"
 											onChange={handleLoginChange}
 										/>
 										<LoginInput
@@ -49,6 +59,7 @@ export default function Login() {
 											name="password"
 											placeholder="Password"
 											onChange={handleLoginChange}
+											bottom
 										/>
 										<button type="submit" className="blue_btn">
 											Log In
