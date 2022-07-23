@@ -5,14 +5,39 @@
 .login_wrap {
 	height: 70vh;
 	color: var(--color-primary);
+	@media (min-width: 850px) {
+		display: flex;
+		align-items: center;
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
 }
 
 .login_1 {
 	width: 300px;
 	margin: 0 auto;
 
+	@media (min-width: 850px) {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		margin-bottom: 15vh;
+	}
+
 	span {
 		font-size: 1.25rem;
+
+		@media (min-width: 850px) {
+			font-size: 2rem;
+		}
+	}
+}
+
+img {
+	@media (min-width: 850px) {
+		width: 300px;
+		margin-left: -1.7rem;
 	}
 }
 
@@ -33,6 +58,10 @@
 	height: fit-content;
 	margin: 1rem auto;
 	border-radius: 10px;
+
+	@media (min-width: 850px) {
+		width: 400px;
+	}
 
 	button {
 		width: 100%;

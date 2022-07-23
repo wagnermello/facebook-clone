@@ -7,7 +7,7 @@
 <img src="https://th.bing.com/th/id/OIP.kLldduaRDS8LGYEXrrWhqgHaHa?pid=ImgDet&rs=1" height="75" width="75"/>
 <img src="https://th.bing.com/th/id/OIP._iHtl1rT20ZCMIxVjLqk2gHaHa?pid=ImgDet&rs=1" height="75" width="75"/>
 </h3>
-<h4>MongoDB | ExpressJS | ReactJS | NodeJS</h4>
+<h4>MongoDB | ExpressJS | ReactJS | NodeJS </h4>
 
 #
 
