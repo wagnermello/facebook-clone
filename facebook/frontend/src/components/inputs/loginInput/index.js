@@ -1,18 +1,29 @@
 import "./loginInput.scss";
 import { useField, ErrorMessage } from "formik";
+import { useMediaQuery } from "react-responsive";
 
 export default function LoginInput({ placeholder, bottom, ...props }) {
 	const [field, meta] = useField(props);
+	const desktopView = useMediaQuery({
+		query: "(min-width: 850px)",
+	});
+
+	console.log(desktopView);
+
 	return (
 		<div className="input_wrap">
 			{meta.touched && meta.error && !bottom && (
 				<div
-					className="input_error"
+					className={
+						desktopView ? "input_error input_error_desktop" : "input_error"
+					}
 					style={{ transform: "translateY(-0.25rem)" }}
 				>
 					{meta.touched && meta.error && <ErrorMessage name={field.name} />}
 					{meta.touched && meta.error && (
-						<div className="error_arrow_top"></div>
+						<div
+							className={desktopView ? "error_arrow_left" : "error_arrow_top"}
+						></div>
 					)}
 				</div>
 			)}
@@ -27,12 +38,18 @@ export default function LoginInput({ placeholder, bottom, ...props }) {
 
 			{meta.touched && meta.error && bottom && (
 				<div
-					className="input_error"
+					className={
+						desktopView ? "input_error input_error_desktop" : "input_error"
+					}
 					style={{ transform: "translateY(0.25rem)" }}
 				>
 					{meta.touched && meta.error && <ErrorMessage name={field.name} />}
 					{meta.touched && meta.error && (
-						<div className="error_arrow_bottom"></div>
+						<div
+							className={
+								desktopView ? "error_arrow_left" : "error_arrow_bottom"
+							}
+						></div>
 					)}
 				</div>
 			)}
