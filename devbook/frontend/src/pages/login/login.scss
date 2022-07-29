@@ -1,0 +1,143 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+.login {
+	background-image: linear-gradient(
+			rgb(133, 7, 217, 0.75),
+			rgb(21, 1, 45, 0.75)
+		),
+		url("../../assets/login_background_image.jpg");
+	background-size: cover;
+	background-position: right;
+	background-repeat: no-repeat;
+
+	@media screen and (max-width: 460px) {
+		background-image: linear-gradient(
+				rgb(133, 7, 217, 0.75),
+				rgb(21, 1, 45, 0.75)
+			),
+			url("../../assets/login_background_image_mobile.jpg");
+		background-size: cover;
+		background-position: right;
+		background-repeat: no-repeat;
+
+		@media screen and (max-width: 1280px) {
+			flex-direction: column !important;
+			justify-content: center !important;
+			align-items: center !important;
+		}
+	}
+
+	.login__container {
+		padding-bottom: 0 !important;
+
+		@media screen and (max-width: 1280px) {
+			flex-direction: column !important;
+		}
+		.login__container__left {
+			width: 55%;
+
+			@media screen and (max-width: 1280px) {
+				padding-bottom: 2rem;
+			}
+
+			img {
+				@include scaleWidth(452px, 1280px);
+
+				@media screen and (max-width: 1280px) {
+					width: 280px;
+				}
+			}
+			p {
+				@include scaleWidth(452px, 1280px);
+				color: $white-color;
+				font-weight: 400 !important;
+				@include scaleFontSize(1.25rem, 1280px);
+
+				@media screen and (max-width: 1280px) {
+					width: 280px;
+					font-size: 1rem;
+				}
+			}
+			.cyborg {
+				@media screen and (max-width: 1280px) {
+					display: none;
+				}
+			}
+		}
+
+		.login__container__right {
+			width: 45%;
+
+			.login__form-container {
+				@include scalePadding(3rem, 3rem, 3rem, 3rem, 1280px);
+				background-color: rgb(21, 1, 45, 0.5);
+				@include scaleBorderRadius(0.5rem, 1280px);
+				@include scaleBoxShadow(0px, 0px, 16px, 8px, 1280px);
+				@media screen and (max-width: 1280px) {
+					width: 328px;
+				}
+
+				input {
+					width: 100%;
+					@include scaleHeight(3rem, 1280px);
+					@include scaleBorderRadius(0.25rem, 1280px);
+					@include scalePadding(1rem, 1rem, 1rem, 1rem, 1280px);
+					@include scaleBoxShadow(4px, 4px, 4px, 0, 1280px);
+
+					@media screen and (max-width: 1280px) {
+						width: 280px;
+					}
+
+					font-family: "Montserrat";
+					@include scaleFontSize(1rem, 1280px);
+					color: $gray-color;
+
+					&::placeholder {
+						color: #acacac;
+						@include scaleFontSize(1rem, 1280px);
+					}
+				}
+				.forgotten_password {
+					color: $white-color;
+					font-weight: 700;
+					@include scaleFontSize(1rem, 1280px);
+				}
+			}
+
+			.sign_splitter {
+				width: 100%;
+				@include scaleHeight(1px, 1280px);
+				background: $white-color;
+			}
+
+			span {
+				color: $white-color;
+				text-align: center;
+				@include scaleFontSize(1rem, 1280px);
+				@include scalePadding(0, 0, 3rem, 0, 1280px);
+
+				@media screen and (max-width: 1280px) {
+					padding: 0 !important;
+					width: 280px;
+				}
+			}
+
+			button {
+				@include scaleWidth(328px, 1280px);
+				@include scaleBoxShadow(4px, 4px, 4px, 0, 1280px);
+				@media screen and (max-width: 1280px) {
+					width: 280px;
+				}
+			}
+			img {
+				display: none;
+				@media screen and (max-width: 1280px) {
+					display: flex;
+					justify-content: center;
+					width: 280px;
+				}
+			}
+		}
+	}
+}
