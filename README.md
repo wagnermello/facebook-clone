@@ -37,5 +37,6 @@
 <p><b>npm i react-router-dom</b> -> used to create app routes</p>
 <p><b>npm i sass</b> -> install sass</p>
 <p><b>npm i redux react-redux redux-devtools-extension</b> -> install redux library</p>
+<p><b>npm i @reduxjs/toolkit</b> -> required to use "configureStore"</p>
 <p><b>npm i formik yup</b> -> install formik to create forms</p>
 <p><b>npm i react-responsive</b> -> detect if view is on desktop view or mobile view, returning boolean</p>
