@@ -1,0 +1,14 @@
+@import "./styles/app-button-size.scss";
+@import "./styles/app-flex.scss";
+@import "./styles/app-font-size.scss";
+@import "./styles/app-gap.scss";
+@import "./styles/app-wrapper.scss";
+@import "./styles/colors.scss";
+@import "./styles/reset.scss";
+@import "./styles//icons/icons.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+body {
+	font-family: "Montserrat", sans-serif;
+}

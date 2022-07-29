@@ -1,0 +1,56 @@
+/*----------APP WRAPPER----------*/
+
+/*Section wrapper*/
+.app__wrapper {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	@media screen and (max-width: 880px) {
+		height: 100%;
+		padding: 0 1rem;
+	}
+}
+
+/*Container wrapper (Section wrapper's first child)*/
+.container__wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	min-height: 100vh;
+	padding: 4rem 0;
+	@include scalePadding(4rem, 0, 4rem, 0, 1366px);
+
+	/*Change this value if you want to change the side spacing of your page*/
+	$sides-spacing: 64px;
+	/*---------------------------------------------------------------------*/
+
+	@media screen and (max-width: 880px) {
+		min-height: auto;
+	}
+
+	@media screen and (min-width: 881px) {
+		max-width: 881 - $sides-spacing;
+	}
+
+	@media screen and (min-width: 1280px) {
+		max-width: 1280px - $sides-spacing;
+	}
+
+	/*-------SCALE-UNTIL-12000px*/
+	/*----------min-width media query value----------*/
+	$min-width: 1366px;
+	/*-----------------------------------------------*/
+
+	$i: $min-width - 128px;
+	@while $min-width < 12000px {
+		$i: $i + 128px;
+		$sides-spacing: calc($sides-spacing * 1.0937);
+		$min-width: calc($min-width * 1.0937);
+
+		@media screen and (min-width: $min-width) {
+			max-width: $min-width - $sides-spacing !important;
+		}
+	}
+}

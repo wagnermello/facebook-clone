@@ -1,0 +1,13 @@
+@import "./scale-function";
+
+/*----------GAP RESIZER----------*/
+
+.gap__y16 {
+	gap: 1rem 0;
+	@include scaleGapY(1rem, 1366px);
+}
+
+.gap__x64 {
+	gap: 0 4rem;
+	@include scaleGapX(4rem, 1366px);
+}

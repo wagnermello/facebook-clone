@@ -1,0 +1,21 @@
+@import "./scale-function";
+
+/*----------FONT RESIZER----------*/
+
+p {
+	font-size: 1rem;
+	@include scaleFontSize(1rem, 1366px);
+
+	line-height: 2rem;
+	@include scaleLineHeight(2rem, 1366px);
+}
+
+h1 {
+	font-size: 1.5rem;
+	@include scaleFontSize(1.5rem, 1366px);
+}
+
+h2 {
+	font-size: 1.25rem;
+	@include scaleFontSize(1.25rem, 1366px);
+}
