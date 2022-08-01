@@ -1,0 +1,31 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+.login__form-container {
+	@include scalePadding(3rem, 3rem, 3rem, 3rem, 1280px);
+	background-color: rgb(21, 1, 45, 0.5);
+	@include scaleBorderRadius(0.5rem, 1280px);
+	@include scaleBoxShadow(0px, 0px, 16px, 8px, 1280px);
+	@media screen and (max-width: 1280px) {
+		width: 328px;
+	}
+
+	button {
+		@include scaleWidth(328px, 1280px);
+		@include scaleBoxShadow(4px, 4px, 4px, 0, 1280px);
+		@media screen and (max-width: 1280px) {
+			width: 280px;
+		}
+	}
+
+	.forgotten_password {
+		color: $white-color;
+		font-weight: 600;
+	}
+
+	.sign-splitter {
+		width: 100%;
+		@include scaleHeight(1px, 1280px);
+		background: rgb(255, 255, 255, 0.5);
+	}
+}
