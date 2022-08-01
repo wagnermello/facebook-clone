@@ -1,5 +1,6 @@
 import React from "react";
 import LoginForm from "../../components/login/LoginForm";
+import RegisterForm from "../../components/login/RegisterForm";
 
 import { login_cyborg, login_logo } from "../../constants/images";
 import "./LoginPage.scss";
@@ -24,6 +25,7 @@ export default function LoginPage() {
 					</span>
 					<img src={login_cyborg} alt="smart cyborg" />
 				</div>
+				<RegisterForm />
 			</div>
 		</section>
 	);

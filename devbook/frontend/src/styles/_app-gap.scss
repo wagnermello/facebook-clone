@@ -19,6 +19,16 @@
 	@include scaleGapY(4rem, 1280px);
 }
 
+.gap__x16 {
+	gap: 0 1rem;
+	@include scaleGapX(1rem, 1280px);
+}
+
+.gap__x32 {
+	gap: 0 2rem;
+	@include scaleGapX(2rem, 1280px);
+}
+
 .gap__x64 {
 	gap: 0 4rem;
 	@include scaleGapX(4rem, 1280px);

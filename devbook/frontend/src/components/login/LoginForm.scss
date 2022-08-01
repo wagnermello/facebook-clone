@@ -21,6 +21,7 @@
 	.forgotten_password {
 		color: $white-color;
 		font-weight: 600;
+		@include scaleFontSize(1rem, 1280px);
 	}
 
 	.sign-splitter {

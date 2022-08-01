@@ -44,7 +44,7 @@ export default function LoginForm() {
 						<LoginInput
 							tyoe="text"
 							name="email"
-							placeholder="Email or phone number"
+							placeholder="Email address"
 							onChange={handleLoginChange}
 						/>
 						<LoginInput
