@@ -5,23 +5,35 @@ import "./RegisterForm.scss";
 import RegisterInput from "../inputs/RegisterInput/RegisterInput";
 import { useState } from "react";
 
-const userInfos = {
-	first_name: "",
-	last_name: "",
-	email: "",
-	password: "",
-	bYear: "",
-	bMonth: "",
-	bDay: "",
-	gender: "",
-};
-
 export default function RegisterForm() {
-	const [user, setUser] = useState();
+	const userInfos = {
+		first_name: "",
+		last_name: "",
+		email: "",
+		password: "",
+		bYear: new Date().getFullYear(),
+		bMonth: new Date().getMonth() + 1,
+		bDay: new Date().getDate(),
+		gender: "",
+	};
+
+	const [user, setUser] = useState(userInfos);
+	const { first_name, last_name, email, password, bYear, bMonth, bDay } = user;
+
 	const handleRegisterChange = (e) => {
 		const { name, value } = e.target;
 		setUser({ ...user, [name]: value });
 	};
+
+	const yearTemp = new Date().getFullYear();
+	const years = Array.from(new Array(108), (val, index) => yearTemp - index);
+	const months = Array.from(new Array(12), (val, index) => 1 + index);
+	const getDays = () => {
+		return new Date(bYear, bMonth, 0).getDate();
+	};
+	const days = Array.from(new Array(getDays()), (val, index) => 1 + index);
+
+	console.log(user);
 
 	return (
 		<div className="blur">
@@ -63,14 +75,38 @@ export default function RegisterForm() {
 							<div className="register__form__birth flex__column__start">
 								<span>Date of birth</span>
 								<div className="flex__row__center register__form__birth__select gap__x16">
-									<select name="bDay">
-										<option>15</option>
+									<select
+										name="bDay"
+										value={bDay}
+										onChange={handleRegisterChange}
+									>
+										{days.map((day, i) => (
+											<option value={bDay} key={i}>
+												{day}
+											</option>
+										))}
 									</select>
-									<select name="bMonth">
-										<option>15</option>
+									<select
+										name="bMonth"
+										value={bMonth}
+										onChange={handleRegisterChange}
+									>
+										{months.map((month, i) => (
+											<option value={month} key={i}>
+												{month}
+											</option>
+										))}
 									</select>
-									<select name="bYear">
-										<option>15</option>
+									<select
+										name="bYear"
+										value={bYear}
+										onChange={handleRegisterChange}
+									>
+										{years.map((year, i) => (
+											<option value={year} key={i}>
+												{year}
+											</option>
+										))}
 									</select>
 								</div>
 							</div>
