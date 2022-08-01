@@ -1,4 +1,4 @@
-# Facebook Clone - With MERN Fullstack
+# Devbook - Facebook Clone - With MERN Fullstack
 
 <h3> MERN Stack: 
 <h3>
@@ -10,8 +10,6 @@
 <h4>MongoDB | ExpressJS | ReactJS | NodeJS </h4>
 
 #
-
-<p>I believe that <b>repetition fix the knowledge</b>. So I'm developing <b>three versions</b> of a Facebook clone to really understand what I'm doing.</p>
 
 <img src="https://media3.giphy.com/media/fZDXPWad3Rhx0H0gDp/source.gif" height="75" width="75"/>
 
