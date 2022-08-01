@@ -249,3 +249,18 @@
 		}
 	}
 }
+/*----------TRANSFORM-SCALE----------*/
+@mixin scaleTransformScale($classAtributeValue, $minWidthMediaQuery) {
+	transform: scale($classAtributeValue);
+
+	$i: $minWidthMediaQuery -128px;
+	@while ($minWidthMediaQuery < 12000px) {
+		$i: $i + 128px;
+		$classAtributeValue: calc($classAtributeValue * 1.0937);
+		$minWidthMediaQuery: calc($minWidthMediaQuery * 1.0937);
+
+		@media screen and (min-width: $minWidthMediaQuery) {
+			transform: scale($classAtributeValue) !important;
+		}
+	}
+}

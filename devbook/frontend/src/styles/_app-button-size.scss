@@ -2,6 +2,8 @@
 
 /*----------BUTTON RESIZER----------*/
 button {
+	font-family: "Montserrat";
+
 	font-size: 1rem;
 	@include scaleFontSize(1rem, 1280px);
 

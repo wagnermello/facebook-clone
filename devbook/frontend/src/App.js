@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import Login from "./pages/login";
-import Profile from "./pages/profile";
 import "./App.scss";
+import HomePage from "./pages/home/HomePage";
+import LoginPage from "./pages/login/LoginPage";
+import ProfilePage from "./pages/profile/ProfilePage";
 
 function App() {
 	return (
 		<div>
 			<Routes>
-				<Route path="/" element={<Home />} exact />
-				<Route path="/login" element={<Login />} exact />
-				<Route path="/profile" element={<Profile />} exact />
+				<Route path="/" element={<HomePage />} exact />
+				<Route path="/login" element={<LoginPage />} exact />
+				<Route path="/profile" element={<ProfilePage />} exact />
 			</Routes>
 		</div>
 	);

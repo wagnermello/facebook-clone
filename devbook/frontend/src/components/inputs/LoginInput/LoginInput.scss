@@ -1,0 +1,55 @@
+@import "../../../styles/scale-function";
+@import "../../../styles/colors";
+
+.login__input-container {
+	width: 100%;
+
+	input {
+		border: 1px solid transparent;
+		width: 100%;
+		@include scaleHeight(3rem, 1280px);
+		@include scaleBorderRadius(0.25rem, 1280px);
+		@include scalePadding(1rem, 1rem, 1rem, 1rem, 1280px);
+		@include scaleBoxShadow(4px, 4px, 4px, 0, 1280px);
+
+		@media screen and (max-width: 1280px) {
+			width: 280px;
+		}
+
+		font-family: "Montserrat";
+		@include scaleFontSize(1rem, 1280px);
+		color: $gray-color;
+
+		&::placeholder {
+			color: #acacac;
+			@include scaleFontSize(1rem, 1280px);
+		}
+	}
+	.forgotten_password {
+		color: $white-color;
+		font-weight: 700;
+		@include scaleFontSize(1rem, 1280px);
+	}
+
+	.input__error-border {
+		border: 1px solid $error-color !important;
+	}
+
+	i {
+		position: absolute !important;
+		@include scaleMargin(1rem, 0, 0, 15rem, 1280px);
+		@include scaleTransformScale(0.8, 1280px);
+		@media screen and (min-width: 1280px) {
+			@include scaleMargin(1rem, 0, 0, 18rem, 1280px);
+		}
+	}
+
+	.input__error {
+		position: relative;
+		text-align: left;
+		color: $error-color;
+		width: 100%;
+		color: $white-color;
+		@include scaleFontSize(0.75rem, 1280px);
+	}
+}

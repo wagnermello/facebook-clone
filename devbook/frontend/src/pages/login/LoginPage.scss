@@ -77,38 +77,17 @@
 				@media screen and (max-width: 1280px) {
 					width: 328px;
 				}
-
-				input {
-					width: 100%;
-					@include scaleHeight(3rem, 1280px);
-					@include scaleBorderRadius(0.25rem, 1280px);
-					@include scalePadding(1rem, 1rem, 1rem, 1rem, 1280px);
-					@include scaleBoxShadow(4px, 4px, 4px, 0, 1280px);
-
-					@media screen and (max-width: 1280px) {
-						width: 280px;
-					}
-
-					font-family: "Montserrat";
-					@include scaleFontSize(1rem, 1280px);
-					color: $gray-color;
-
-					&::placeholder {
-						color: #acacac;
-						@include scaleFontSize(1rem, 1280px);
-					}
-				}
-				.forgotten_password {
-					color: $white-color;
-					font-weight: 700;
-					@include scaleFontSize(1rem, 1280px);
-				}
 			}
 
-			.sign_splitter {
+			.forgotten_password {
+				color: $white-color;
+				font-weight: 600;
+			}
+
+			.sign-splitter {
 				width: 100%;
 				@include scaleHeight(1px, 1280px);
-				background: $white-color;
+				background: rgb(255, 255, 255, 0.5);
 			}
 
 			span {

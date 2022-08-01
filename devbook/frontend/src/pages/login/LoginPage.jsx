@@ -1,12 +1,36 @@
 import React from "react";
 
 import { login_cyborg, login_logo } from "../../constants/images";
-import "./login.scss";
+import "./LoginPage.scss";
 
 import { Form, Formik } from "formik";
 import { Link } from "react-router-dom";
+import * as Yup from "yup";
+import LoginInput from "../../components/inputs/LoginInput/LoginInput";
+import { useState } from "react";
 
-export default function Login() {
+const loginInfos = {
+	email: "",
+	password: "",
+};
+
+export default function LoginPage() {
+	const [login, setLogin] = useState(loginInfos);
+	const { email, password } = login;
+	console.log(login);
+
+	const handleLoginChange = (e) => {
+		const { name, value } = e.target;
+		setLogin({ ...login, [name]: value });
+	};
+	const loginValidation = Yup.object({
+		email: Yup.string()
+			.required("*Email adress is required.")
+			.email("*Must be a valid email.")
+			.max(100),
+		password: Yup.string().required("*Password is required."),
+	});
+
 	return (
 		<section className="login app__wrapper">
 			<div className="login__container container__wrapper flex__row__center">
@@ -20,11 +44,28 @@ export default function Login() {
 				</div>
 				<div className="login__container__right  flex__column__center gap__y32">
 					<div className="login__form-container flex__column__center gap__y32">
-						<Formik>
+						<Formik
+							enableReinitialize
+							initialValues={{
+								email,
+								password,
+							}}
+							validationSchema={loginValidation}
+						>
 							{(formik) => (
 								<Form className="flex__column__center  gap__y16">
-									<input type="text" placeholder="Email or phone number" />
-									<input type="text" placeholder="Password" />
+									<LoginInput
+										tyoe="text"
+										name="email"
+										placeholder="Email or phone number"
+										onChange={handleLoginChange}
+									/>
+									<LoginInput
+										type="password"
+										name="password"
+										placeholder="Password"
+										onChange={handleLoginChange}
+									/>
 									<button className="button-purple" type="submit">
 										LOG IN
 									</button>
