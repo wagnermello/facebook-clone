@@ -66,76 +66,9 @@
 		@include scaleMargin(1rem, 0, 1.5rem, 0, 1280px);
 	}
 
-	.register__form__birth {
-		@include scaleWidth(280px, 1280px);
-		margin: 0 auto;
-
-		span {
-			color: $gray-color;
-			@include scaleFontSize(1rem, 1280px);
-		}
-		.register__form__birth__select {
-			grid-template-columns: repeat(3, 1fr);
-			@include scaleMargin(0.5rem, 0, 0, 0, 1280px);
-
-			select {
-				@include scaleBorderRadius(1rem, 1280px);
-				@include scaleWidth(5.125rem, 1280px);
-				@include scaleHeight(2rem, 1280px);
-				@include scaleFontSize(1rem, 1280px);
-				@include scalePadding(0, 1rem, 0, 0.5rem, 1280px);
-
-				color: $gray-color;
-				background-color: $white-color;
-				@include scaleBoxShadow(0px, 0px, 8px, 0, 1280px);
-				cursor: pointer;
-
-				appearance: none;
-
-				background-image: url(../../assets/register_arrow_down.svg);
-				background-repeat: no-repeat;
-				background-position: 90% center;
-				background-size: 20%;
-
-				option {
-					@include scaleFontSize(0.75rem, 1280px);
-				}
-			}
-		}
-	}
-
 	.register__form__gender {
 		@include scaleMargin(1rem, auto, 0, auto, 1280px);
 		@include scaleWidth(280px, 1280px);
-
-		span {
-			color: $gray-color;
-			@include scaleFontSize(1rem, 1280px);
-		}
-
-		.register__form__gender__label {
-			justify-content: space-between !important;
-			width: 100%;
-
-			label {
-				display: flex;
-				align-items: center;
-				justify-content: space-between !important;
-
-				@include scaleBorderRadius(1rem, 1280px);
-				@include scaleHeight(2rem, 1280px);
-				@include scaleFontSize(1rem, 1280px);
-				color: $gray-color;
-				cursor: pointer;
-
-				input {
-					@include scaleMargin(0.2rem, 0, 0, 0.3rem, 1280px);
-					cursor: pointer;
-					accent-color: $medium-purple;
-					@include scaleTransformScale(1, 1920px);
-				}
-			}
-		}
 	}
 
 	button {
@@ -153,4 +86,47 @@
 	bottom: 0;
 	background: rgba(10, 1, 25, 0.75);
 	z-index: 99;
+}
+
+.input__error {
+	position: relative;
+	text-align: left;
+	color: $error-color;
+	@include scaleWidth(280px, 1280px);
+	@include scaleFontSize(0.75rem, 1280px);
+}
+
+/*----------Error and Success Styles---------*/
+.error_text {
+	position: relative;
+	text-align: left;
+	color: $error-color;
+	@include scaleWidth(280px, 1280px);
+	@include scaleFontSize(0.75rem, 1280px);
+	@include scaleMargin(1rem, 0, 0, 0, 1280px);
+}
+
+.success_text {
+	position: relative;
+	text-align: left;
+	color: $medium-purple;
+	@include scaleWidth(280px, 1280px);
+	@include scaleFontSize(0.75rem, 1280px);
+	@include scaleMargin(1rem, 0, 0, 0, 1280px);
+}
+/*----------Error and Success Styles---------*/
+
+.login__spinner__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(10, 1, 25, 0.75);
+	z-index: 99;
+	transition: all 0.3s ease-in-out;
+
+	.login__spinner {
+		@include scaleTransformScale(1, 1280px);
+	}
 }

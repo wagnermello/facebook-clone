@@ -1,0 +1,31 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+span {
+	color: $gray-color;
+	@include scaleFontSize(1rem, 1280px);
+}
+
+.register__form__gender__label {
+	justify-content: space-between !important;
+	width: 100%;
+
+	label {
+		display: flex;
+		align-items: center;
+		justify-content: space-between !important;
+
+		@include scaleBorderRadius(1rem, 1280px);
+		@include scaleHeight(2rem, 1280px);
+		@include scaleFontSize(1rem, 1280px);
+		color: $gray-color;
+		cursor: pointer;
+
+		input {
+			@include scaleMargin(0.2rem, 0, 0, 0.3rem, 1280px);
+			cursor: pointer;
+			accent-color: $medium-purple;
+			@include scaleTransformScale(1, 1920px);
+		}
+	}
+}

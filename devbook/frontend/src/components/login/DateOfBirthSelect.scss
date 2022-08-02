@@ -1,0 +1,40 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+.register__form__birth {
+	@include scaleWidth(280px, 1280px);
+	margin: 0 auto;
+
+	span {
+		color: $gray-color;
+		@include scaleFontSize(1rem, 1280px);
+	}
+	.register__form__birth__select {
+		grid-template-columns: repeat(3, 1fr);
+		@include scaleMargin(0.5rem, 0, 0, 0, 1280px);
+
+		select {
+			@include scaleBorderRadius(1rem, 1280px);
+			@include scaleWidth(5.125rem, 1280px);
+			@include scaleHeight(2rem, 1280px);
+			@include scaleFontSize(1rem, 1280px);
+			@include scalePadding(0, 1rem, 0, 0.5rem, 1280px);
+
+			color: $gray-color;
+			background-color: $white-color;
+			@include scaleBoxShadow(0px, 0px, 8px, 0, 1280px);
+			cursor: pointer;
+
+			appearance: none;
+
+			background-image: url(../../assets/register_arrow_down.svg);
+			background-repeat: no-repeat;
+			background-position: 90% center;
+			background-size: 20%;
+
+			option {
+				@include scaleFontSize(0.75rem, 1280px);
+			}
+		}
+	}
+}

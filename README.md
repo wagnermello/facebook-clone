@@ -17,7 +17,7 @@
 
 <h3>Backend packages:</h3>
 
-<p><b>npm init</b> -> initialize NodeJS</p>
+<p><b>npm init -y</b> -> initialize NodeJS</p>
 <p><b>npm i express</b> -> install ExpressJS</p>
 <p><b>npm i nodemon</b> -> install Nodemon (nodemon will automatically restart the node application when file changes in the directory are detected)</p>
 <p><b>npm i cors</b> -> install CORS (Cross Origin Resource Sharing is a NodeJS package that adds a layer of security to the api/server limiting who can access it or limiting who can access a certain route)</p>
@@ -27,6 +27,7 @@
 <p><b>npm i jsonwebtoken</b> -> used to create json web tokens</p>
 <p><b>npm i googleapis</b> -> connect to google apis</p>
 <p><b>npm i nodemailer</b> -> e-mail sending from NodeJS applications</p>
+<p><b>npm i js-cookie</b> -> setup cookies</p>
 
 #
 
@@ -38,3 +39,5 @@
 <p><b>npm i @reduxjs/toolkit</b> -> required to use "configureStore"</p>
 <p><b>npm i formik yup</b> -> install formik to create forms</p>
 <p><b>npm i react-responsive</b> -> detect if view is on desktop view or mobile view, returning boolean</p>
+<p><b>npm i react-spinners</b> -> spinners for loading</p>
+<p><b>npm i axios</b> -> promise based HTTP client</p>
