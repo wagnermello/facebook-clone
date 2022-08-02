@@ -29,4 +29,12 @@
 		@include scaleHeight(1px, 1280px);
 		background: rgb(255, 255, 255, 0.5);
 	}
+
+	.login_error_text {
+		text-align: center;
+		color: $error-color-2;
+		@include scaleWidth(280px, 1280px);
+		@include scaleFontSize(0.75rem, 1280px);
+		@include scaleMargin(-1rem, 0, -1rem, 0, 1280px);
+	}
 }

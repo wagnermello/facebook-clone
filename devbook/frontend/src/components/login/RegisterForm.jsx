@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import axios from "axios";
 
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
@@ -9,6 +8,7 @@ import RegisterInput from "../inputs/RegisterInput/RegisterInput";
 import DateOfBirthSelect from "./DateOfBirthSelect";
 import GenderSelect from "./GenderSelect";
 
+import axios from "axios";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import { useDispatch } from "react-redux";
 import Cookies from "js-cookie";
@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./RegisterForm.scss";
 
-export default function RegisterForm() {
+export default function RegisterForm({ setVisible }) {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const userInfos = {
@@ -121,7 +121,7 @@ export default function RegisterForm() {
 		<div className="blur">
 			<div className="register flex__column__center">
 				<div className="register__form__header flex__column__start">
-					<i className="exit_icon"></i>
+					<i className="exit_icon" onClick={() => setVisible(false)}></i>
 					<span>Sign Up</span>
 					<p>It's very quick and easy</p>
 				</div>

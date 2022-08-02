@@ -99,7 +99,7 @@
 /*----------Error and Success Styles---------*/
 .error_text {
 	position: relative;
-	text-align: left;
+	text-align: center;
 	color: $error-color;
 	@include scaleWidth(280px, 1280px);
 	@include scaleFontSize(0.75rem, 1280px);
@@ -115,18 +115,3 @@
 	@include scaleMargin(1rem, 0, 0, 0, 1280px);
 }
 /*----------Error and Success Styles---------*/
-
-.login__spinner__container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(10, 1, 25, 0.75);
-	z-index: 99;
-	transition: all 0.3s ease-in-out;
-
-	.login__spinner {
-		@include scaleTransformScale(1, 1280px);
-	}
-}
