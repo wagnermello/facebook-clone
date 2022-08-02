@@ -10,7 +10,11 @@
 	@include scaleBoxShadow(0px, 0px, 16px, 8px, 1280px);
 	@include scaleBorderRadius(0.5rem, 1280px);
 	@include scalePadding(2rem, 2rem, 2rem, 2rem, 1280px);
-	@include scaleWidth(328px, 1280px);
+	width: 328px;
+
+	@media screen and (min-width: 1280px) {
+		@include scaleWidth(360px, 1280px);
+	}
 
 	.register__container {
 		width: 100%;
@@ -54,6 +58,7 @@
 			right: 0;
 			top: 0;
 			cursor: pointer;
+			@include scaleTransformScale(1, 1280px);
 		}
 	}
 
@@ -78,7 +83,7 @@
 				@include scaleWidth(5.125rem, 1280px);
 				@include scaleHeight(2rem, 1280px);
 				@include scaleFontSize(1rem, 1280px);
-				@include scalePadding(0, 1rem, 0, 0.25rem, 1280px);
+				@include scalePadding(0, 1rem, 0, 0.5rem, 1280px);
 
 				color: $gray-color;
 				background-color: $white-color;
@@ -91,6 +96,10 @@
 				background-repeat: no-repeat;
 				background-position: 90% center;
 				background-size: 20%;
+
+				option {
+					@include scaleFontSize(0.75rem, 1280px);
+				}
 			}
 		}
 	}
@@ -123,7 +132,7 @@
 					@include scaleMargin(0.2rem, 0, 0, 0.3rem, 1280px);
 					cursor: pointer;
 					accent-color: $medium-purple;
-					@include scaleTransformScale(1, 1280px);
+					@include scaleTransformScale(1, 1920px);
 				}
 			}
 		}
@@ -132,6 +141,7 @@
 	button {
 		@include scaleMargin(1rem, 0, 0, 0, 1280px);
 		width: 100%;
+		@include scaleBoxShadow(0px, 0px, 8px, 0, 1280px);
 	}
 }
 

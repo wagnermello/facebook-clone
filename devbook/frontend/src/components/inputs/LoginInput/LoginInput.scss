@@ -42,7 +42,6 @@
 	.input__error {
 		position: relative;
 		text-align: left;
-		color: $error-color;
 		width: 100%;
 		color: $white-color;
 		@include scaleFontSize(0.75rem, 1280px);
