@@ -2,6 +2,7 @@
 
 /*----------GAP RESIZER----------*/
 
+/*----------GAP Y----------*/
 .gap__y16 {
 	gap: 1rem 0;
 	@include scaleGapY(1rem, 1280px);
@@ -19,6 +20,11 @@
 	@include scaleGapY(4rem, 1280px);
 }
 
+/*----------GAP X----------*/
+.gap__x8 {
+	gap: 0 0.5rem;
+	@include scaleGapX(0.5rem, 1280px);
+}
 .gap__x16 {
 	gap: 0 1rem;
 	@include scaleGapX(1rem, 1280px);

@@ -102,13 +102,34 @@
 			@include scaleHeight(2rem, 1280px);
 			cursor: pointer;
 		}
+		.header__profile {
+			img {
+				@include scaleBorderRadius(8rem, 1280px);
+			}
+			span {
+				@include scaleFontSize(1rem, 1280px);
+				font-weight: 600;
+				color: $white-color;
+			}
+		}
 	}
 
 	/*----NOTIFICATION-----*/
-	.notification {
+	.notification-2digits {
 		position: absolute;
 		@include scaleMargin(0, 0, 1.5rem, 2rem, 1280px);
 		@include scalePadding(0.25rem, 0.25rem, 0.25rem, 0.25rem, 1280px);
+		@include scaleBorderRadius(4rem, 1280px);
+		color: $white-color;
+		background-color: $light-purple-1;
+		font-weight: 600;
+		@include scaleFontSize(0.5rem, 1280px);
+	}
+
+	.notification-1digit {
+		position: absolute;
+		@include scaleMargin(0, 0, 1.5rem, 2rem, 1280px);
+		@include scalePadding(0.25rem, 0.4rem, 0.25rem, 0.4rem, 1280px);
 		@include scaleBorderRadius(4rem, 1280px);
 		color: $white-color;
 		background-color: $light-purple-1;
