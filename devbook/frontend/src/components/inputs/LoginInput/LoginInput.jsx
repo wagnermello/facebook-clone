@@ -6,7 +6,7 @@ export default function LoginInput({ placeholder, ...props }) {
 	return (
 		<div className="login__input-container flex__column__center">
 			{meta.touched && meta.error && (
-				<div className="input__error">
+				<div className="login__input__error">
 					{meta.touched && meta.error && <ErrorMessage name={field.name} />}
 				</div>
 			)}

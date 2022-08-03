@@ -19,8 +19,8 @@
 	align-items: center;
 	margin: 0 auto;
 	min-height: 100vh;
-	padding: 4rem 0;
-	@include scalePadding(4rem, 0, 4rem, 0, 1280px);
+	padding: 2rem 0;
+	@include scalePadding(2rem, 0, 2rem, 0, 1280px);
 
 	/*Change this value if you want to change the side spacing of your page*/
 	$sides-spacing: 64px;

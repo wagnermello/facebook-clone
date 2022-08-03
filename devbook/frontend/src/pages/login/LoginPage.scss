@@ -6,7 +6,7 @@
 			rgb(133, 7, 217, 0.75),
 			rgb(21, 1, 45, 0.75)
 		),
-		url("../../assets/login_background_image.jpg");
+		url("../../assets/login/login_background_image.jpg");
 	background-size: cover;
 	background-position: right;
 	background-repeat: no-repeat;
@@ -16,7 +16,7 @@
 				rgb(133, 7, 217, 0.75),
 				rgb(21, 1, 45, 0.75)
 			),
-			url("../../assets/login_background_image_mobile.jpg");
+			url("../../assets/login/login_background_image_mobile.jpg");
 		background-size: cover;
 		background-position: right;
 		background-repeat: no-repeat;
@@ -43,6 +43,7 @@
 
 			img {
 				@include scaleWidth(452px, 1280px);
+				@include scaleMargin(1rem, 0, 0, 0, 1280px);
 
 				@media screen and (max-width: 1280px) {
 					width: 280px;

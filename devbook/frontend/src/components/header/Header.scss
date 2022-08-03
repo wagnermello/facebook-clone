@@ -1,0 +1,118 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+.header {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	@include scalePadding(0rem, 2rem, 0, 2rem, 1280px);
+	@include scaleHeight(3rem, 1280px);
+	background-color: $dark-purple-1;
+
+	width: 100%;
+
+	/*-----HEADER-LEFT-----*/
+	.header__left {
+		.header__logo {
+			img {
+				@include scaleWidth(2rem, 1280px);
+			}
+		}
+
+		.header__search-container {
+			@include scaleHeight(2rem, 1280px);
+			@include scaleWidth(226px, 1280px);
+			background-color: $white-color;
+			@include scaleBorderRadius(0.5rem, 1280px);
+			@include scalePadding(0, 1rem, 0, 1rem, 1280px);
+
+			img {
+				@include scaleWidth(1rem, 1280px);
+				cursor: pointer;
+			}
+
+			input {
+				background-color: transparent;
+				border: transparent;
+				font-family: "Montserrat", sans-serif;
+				@include scaleFontSize(1rem, 1280px);
+				color: $dark-purple-1;
+				outline: none;
+				width: 100%;
+
+				&::placeholder {
+					color: $gray-color;
+					border: none;
+				}
+			}
+		}
+	}
+
+	/*-----HEADER-MIDDLE-----*/
+
+	.header__middle {
+		.header__home {
+			@include scaleWidth(128px, 1280px);
+			height: 100%;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $medium-purple;
+				transition: all 0.3s ease-out;
+			}
+		}
+		.header__friends {
+			@include scaleWidth(128px, 1280px);
+			height: 100%;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $medium-purple;
+				transition: all 0.3s ease-out;
+			}
+		}
+		.header__videos {
+			@include scaleWidth(128px, 1280px);
+			height: 100%;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $medium-purple;
+				transition: all 0.3s ease-out;
+			}
+		}
+		.header__groups {
+			@include scaleWidth(128px, 1280px);
+			height: 100%;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $medium-purple;
+				transition: all 0.3s ease-out;
+			}
+		}
+		img {
+			@include scaleHeight(1.5rem, 1280px);
+		}
+	}
+
+	/*-----HEADER-RIGHT-----*/
+	.header__right {
+		justify-content: flex-end;
+		img {
+			@include scaleHeight(2rem, 1280px);
+			cursor: pointer;
+		}
+	}
+
+	/*----NOTIFICATION-----*/
+	.notification {
+		position: absolute;
+		@include scaleMargin(0, 0, 1.5rem, 2rem, 1280px);
+		@include scalePadding(0.25rem, 0.25rem, 0.25rem, 0.25rem, 1280px);
+		@include scaleBorderRadius(4rem, 1280px);
+		color: $white-color;
+		background-color: $light-purple-1;
+		font-weight: 600;
+		@include scaleFontSize(0.5rem, 1280px);
+	}
+}
