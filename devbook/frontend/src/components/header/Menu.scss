@@ -1,0 +1,83 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+.menu-dropdown {
+	position: absolute;
+	justify-content: flex-start !important;
+	background-color: $white-color;
+	@include scaleMargin(2rem, 17rem, 0, 0, 1280px);
+	height: 70vh;
+	@include scaleWidth(280px, 1280px);
+	@include scalePadding(0.5rem, 1rem, 0.5rem, 1rem, 1280px);
+	@include scaleBoxShadow(2px, 2px, 8px, 0, 1280px);
+	@include scaleBorderRadius(0.5rem, 1280px);
+	transform: all 0.3s ease-out;
+	-webkit-font-smoothing: antialiased;
+	z-index: 1;
+	top: 0;
+	cursor: default;
+	overflow-y: auto;
+
+	h1 {
+		@include scaleFontSize(1.25rem, 1280px);
+		color: $medium-purple;
+		font-weight: 700;
+		@include scaleMargin(0, 0, 1rem, 0, 1280px);
+	}
+
+	h3 {
+		@include scaleFontSize(1rem, 1280px);
+		color: $dark-purple-2;
+		font-weight: 700;
+	}
+
+	h4 {
+		@include scaleFontSize(0.75rem, 1280px);
+		color: $dark-purple-1;
+		font-weight: 600;
+		cursor: pointer;
+	}
+
+	span {
+		@include scaleFontSize(0.75rem, 1280px);
+		color: $gray-color;
+		font-weight: 400;
+		cursor: pointer;
+	}
+	.menu-dropdown__splitter {
+		@include scaleHeight(0.5px, 1280px);
+		background-color: $light-gray-2;
+		width: 100%;
+	}
+	.menu-dropdown__search-container {
+		width: 100%;
+		justify-content: space-between;
+		background-color: $light-gray-3;
+		@include scaleBorderRadius(0.5rem, 1280px);
+		@include scalePadding(0.5rem, 0.5rem, 0.5rem, 0.5rem, 1280px);
+		@include scaleMargin(0, 0, 1rem, 0, 1280px);
+		input {
+			background-color: transparent;
+			outline: none;
+			color: $dark-purple-2;
+			font-family: "Montserrat", sans serif;
+			@include scaleFontSize(0.75rem, 1280px);
+
+			&::placeholder {
+				color: $light-gray;
+			}
+		}
+		img {
+			@include scaleHeight(1rem, 1280px);
+		}
+	}
+}
+.scrollbar {
+	&::-webkit-scrollbar {
+		@include scaleWidth(0.5rem, 1280px);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $dark-purple-1;
+		@include scaleBorderRadius(1rem, 1280px);
+	}
+}

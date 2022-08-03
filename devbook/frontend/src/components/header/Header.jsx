@@ -4,13 +4,20 @@ import { Link } from "react-router-dom";
 import images from "../../constants/images";
 import { useSelector } from "react-redux";
 import SearchMenu from "./SearchMenu";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import Menu from "./Menu";
+import useClickOutside from "../../helpers/clickOutside";
 
 export default function Header() {
 	const { user } = useSelector((user) => ({
 		...user,
 	}));
 	const [showSearchMenu, setShowSearchMenu] = useState(false);
+	const [showMenu, setShowMenu] = useState(false);
+	const menu = useRef(null);
+	useClickOutside(menu, () => {
+		setShowMenu(false);
+	});
 
 	return (
 		<header className="header">
@@ -54,7 +61,15 @@ export default function Header() {
 			{/*-----HEADER-RIGHT-----*/}
 			<div className="header__right flex__row gap__x16">
 				<Link to="/" className="header__menu flex__column__center">
-					<img src={images.header_menu_icon} alt="menu" />
+					<img
+						src={images.header_menu_icon}
+						alt="menu"
+						ref={menu}
+						onClick={() => {
+							setShowMenu((prev) => !prev);
+						}}
+					/>
+					{showMenu && <Menu />}
 				</Link>
 				<Link to="/" className="header__chat flex__column__center">
 					<img src={images.header_chat_icon} alt="chat" />
