@@ -3,6 +3,10 @@
 /*----------GAP RESIZER----------*/
 
 /*----------GAP Y----------*/
+.gap__y8 {
+	gap: 0.5rem 0;
+	@include scaleGapY(0.5rem, 1280px);
+}
 .gap__y16 {
 	gap: 1rem 0;
 	@include scaleGapY(1rem, 1280px);

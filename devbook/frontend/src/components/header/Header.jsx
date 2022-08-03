@@ -3,11 +3,14 @@ import "./Header.scss";
 import { Link } from "react-router-dom";
 import images from "../../constants/images";
 import { useSelector } from "react-redux";
+import SearchMenu from "./SearchMenu";
+import { useState } from "react";
 
 export default function Header() {
 	const { user } = useSelector((user) => ({
 		...user,
 	}));
+	const [showSearchMenu, setShowSearchMenu] = useState(false);
 
 	return (
 		<header className="header">
@@ -16,7 +19,12 @@ export default function Header() {
 				<Link to="/" className="header__logo">
 					<img src={images.header_logo} alt="devbook logo" />
 				</Link>
-				<div className="header__search-container flex__row__center">
+				<div
+					className="header__search-container flex__row__center"
+					onClick={() => {
+						setShowSearchMenu(true);
+					}}
+				>
 					<input
 						type="text"
 						placeholder="Search on Devbook"
@@ -25,6 +33,8 @@ export default function Header() {
 					<img src={images.header_search_icon} alt="" />
 				</div>
 			</div>
+			{showSearchMenu && <SearchMenu setShowSearchMenu={setShowSearchMenu} />}
+
 			{/*-----HEADER-MIDDLE-----*/}
 			<div className="header__middle flex__row__center">
 				<Link to="/" className="header__home flex__column__center">

@@ -10,6 +10,7 @@ import header_groups_icon from "../assets/header/header_groups_icon.svg";
 import header_chat_icon from "../assets/header/header_chat_icon.svg";
 import header_menu_icon from "../assets/header/header_menu_icon.svg";
 import header_notifications_icon from "../assets/header/header_notifications_icon.svg";
+import header_arrow_left from "../assets/header/header_arrow_left.svg";
 
 export default {
 	login_logo,
@@ -24,4 +25,5 @@ export default {
 	header_chat_icon,
 	header_menu_icon,
 	header_notifications_icon,
+	header_arrow_left,
 };
