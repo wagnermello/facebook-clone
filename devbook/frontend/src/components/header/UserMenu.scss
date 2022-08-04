@@ -5,6 +5,9 @@
 	position: absolute;
 	background-color: $white-color;
 	@include scaleMargin(2rem, 20rem, 0, 0, 1280px);
+	@media screen and (max-width: 1080px) {
+		margin: 2rem 18rem 0 0;
+	}
 	@media screen and (max-width: 680px) {
 		margin: 3rem 15rem 0 0;
 	}

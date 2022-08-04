@@ -1,0 +1,6 @@
+@import "../../styles/scale-function";
+
+.homepage__wrapper {
+	position: fixed;
+	@include scaleMargin(2rem, 1rem, 0, 1rem, 1280px);
+}

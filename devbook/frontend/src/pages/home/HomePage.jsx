@@ -1,19 +1,17 @@
 import "./HomePage.scss";
 
 import Header from "../../components/header/Header";
-import useClickOutside from "../../helpers/clickOutside";
-import { useRef, useState } from "react";
+import LeftHome from "../../components/home/LeftHome";
+import { useSelector } from "react-redux";
 
 export default function HomePage() {
-	const [visible, setVisible] = useState(true);
-	const element = useRef(null);
-	useClickOutside(element, () => {
-		setVisible(false);
-	});
+	const { user } = useSelector((user) => ({ ...user }));
 	return (
 		<div>
 			<Header />
-			{visible && <div className="card" ref={element}></div>}
+			<div className="homepage__wrapper">
+				<LeftHome user={user} />
+			</div>
 		</div>
 	);
 }

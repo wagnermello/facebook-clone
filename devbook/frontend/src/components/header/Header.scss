@@ -7,10 +7,7 @@
 	@media screen and (max-width: 680px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	@include scalePadding(0rem, 2rem, 0, 2rem, 1280px);
-	@media screen and (max-width: 680px) {
-		padding: 0 1rem 0 1rem;
-	}
+	@include scalePadding(0rem, 1rem, 0, 1rem, 1280px);
 	@include scaleHeight(3rem, 1280px);
 	background-color: $dark-purple-1;
 

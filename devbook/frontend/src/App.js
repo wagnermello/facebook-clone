@@ -3,14 +3,20 @@ import "./App.scss";
 import HomePage from "./pages/home/HomePage";
 import LoginPage from "./pages/login/LoginPage";
 import ProfilePage from "./pages/profile/ProfilePage";
+import LoggedInRoutes from "./routes/LoggedInRoutes";
+import NotLoggedInRoutes from "./routes/NotLoggedInRoutes";
 
 function App() {
 	return (
 		<div>
 			<Routes>
-				<Route path="/" element={<HomePage />} exact />
-				<Route path="/login" element={<LoginPage />} exact />
-				<Route path="/profile" element={<ProfilePage />} exact />
+				<Route element={<LoggedInRoutes />}>
+					<Route path="/profile" element={<ProfilePage />} exact />
+					<Route path="/" element={<HomePage />} exact />
+				</Route>
+				<Route element={<NotLoggedInRoutes />}>
+					<Route path="/login" element={<LoginPage />} exact />
+				</Route>
 			</Routes>
 		</div>
 	);

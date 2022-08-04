@@ -1,0 +1,48 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+.home__left-container {
+	.home__left-container__profile {
+		justify-content: center !important;
+		img {
+			@include scaleWidth(2rem, 1280px);
+			border-radius: 50%;
+		}
+		span {
+			@include scaleFontSize(1rem, 1280px);
+			color: $dark-purple-1;
+			font-weight: 700;
+		}
+	}
+	.home__left-container__item {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		.left__icon__container {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			@include scaleWidth(2rem, 1280px);
+			img {
+				@include scaleHeight(1.25rem, 1280px);
+			}
+		}
+		span {
+			color: $dark-purple-1;
+			@include scaleFontSize(1rem, 1280px);
+			font-weight: 600;
+		}
+	}
+}
+
+.home__left-container__splitter {
+	@include scaleHeight(0.5px, 1280px);
+	background-color: $light-gray-2;
+	width: 100%;
+}
+
+.home__left-container__shortcuts {
+}
