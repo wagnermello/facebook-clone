@@ -1,11 +1,14 @@
 import "./UserMenu.scss";
 import { Link } from "react-router-dom";
-import images from "../../constants/images";
+import headerImages from "../../constants/headerImages";
 import React, { useState } from "react";
 import UserMenuSettings from "./UserMenuSettings";
+import UserMenuSupport from "./UserMenuSupport";
 
 export default function UserMenu({ user }) {
-	const [visible, setVisible] = useState(1);
+	const [visible, setVisible] = useState(0);
+	console.log(visible);
+
 	return (
 		<div className="user-menu flex__column__start gap__y16">
 			{visible === 0 && (
@@ -26,32 +29,43 @@ export default function UserMenu({ user }) {
 					<div className="user-menu__items flex__column__start gap__y16">
 						<div className="flex__row__start gap__x8">
 							<div className="user-menu__icon-container">
-								<img src={images.feedback} alt="give feedback" />
+								<img src={headerImages.feedback} alt="give feedback" />
 							</div>
 							<span>Give Feedback</span>
 						</div>
-						<div className="flex__row__start gap__x8">
+						<div
+							className="flex__row__start gap__x8"
+							onClick={() => {
+								setVisible(1);
+							}}
+						>
 							<div className="user-menu__icon-container">
-								<img src={images.seetings} alt="seetings" />
+								<img src={headerImages.seetings} alt="seetings" />
 							</div>
 							<span>Seetings</span>
 						</div>
-						<div className="flex__row__start gap__x8">
-							<div className="user-menu__icon-container">
-								<img src={images.support} alt="support" />
+						<div
+							className="flex__row__start gap__x8"
+							onClick={() => {
+								setVisible(2);
+							}}
+						>
+							<div className="user-menu__icon-container ">
+								<img src={headerImages.support} alt="support" />
 							</div>
 							<span>Support</span>
 						</div>
 						<div className="flex__row__start gap__x8">
 							<div className="user-menu__icon-container">
-								<img src={images.logout} alt="logout" />
+								<img src={headerImages.logout} alt="logout" />
 							</div>
 							<span>Log out</span>
 						</div>
 					</div>
 				</>
 			)}
-			{visible === 1 && <UserMenuSettings />}
+			{visible === 1 && <UserMenuSettings setVisible={setVisible} />}
+			{visible === 2 && <UserMenuSupport setVisible={setVisible} />}
 		</div>
 	);
 }

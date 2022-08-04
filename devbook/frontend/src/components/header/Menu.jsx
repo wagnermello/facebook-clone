@@ -1,5 +1,5 @@
 import React from "react";
-import images from "../../constants/images";
+import headerImages from "../../constants/headerImages";
 
 import "./Menu.scss";
 
@@ -9,7 +9,7 @@ export default function Menu() {
 			<h1>Menu</h1>
 			<div className="menu-dropdown__search-container flex__row">
 				<input type="text" placeholder="Search on Menu" />
-				<img src={images.header_search_icon} alt="" />
+				<img src={headerImages.header_search_icon} alt="" />
 			</div>
 			<div className="menu-dropdown__container flex__column__start gap__y16">
 				<div className="menu-dropdown__splitter"></div>
@@ -20,7 +20,7 @@ export default function Menu() {
 					<div className="menu-dropdown__item flex__column__start gap__y16">
 						{/*campus*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.campus} alt="campus" />
+							<img src={headerImages.campus} alt="campus" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Campus</h4>
 								<span>Exclusive space for students.</span>
@@ -28,7 +28,7 @@ export default function Menu() {
 						</div>
 						{/*events*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.events} alt="events" />
+							<img src={headerImages.events} alt="events" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Events</h4>
 								<span>Organize or find events.</span>
@@ -36,7 +36,7 @@ export default function Menu() {
 						</div>
 						{/*friends*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.friends} alt="friends" />
+							<img src={headerImages.friends} alt="friends" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Find Friends</h4>
 								<span>Search for friends.</span>
@@ -44,7 +44,7 @@ export default function Menu() {
 						</div>
 						{/*groups*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.groups} alt="groups" />
+							<img src={headerImages.groups} alt="groups" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Groups</h4>
 								<span>Create or search for groups.</span>
@@ -52,7 +52,7 @@ export default function Menu() {
 						</div>
 						{/*feed*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.feed} alt="feed" />
+							<img src={headerImages.feed} alt="feed" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Feed</h4>
 								<span>See relevant posts.</span>
@@ -60,7 +60,7 @@ export default function Menu() {
 						</div>
 						{/*favorites*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.fav} alt="fav" />
+							<img src={headerImages.fav} alt="fav" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>favorites</h4>
 								<span>View favorite posts.</span>
@@ -68,7 +68,7 @@ export default function Menu() {
 						</div>
 						{/*recent*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.recent} alt="recent" />
+							<img src={headerImages.recent} alt="recent" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Most Recent</h4>
 								<span>See the most recent posts.</span>
@@ -76,7 +76,7 @@ export default function Menu() {
 						</div>
 						{/*pages*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.pages} alt="pages" />
+							<img src={headerImages.pages} alt="pages" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Pages</h4>
 								<span>Discover pages on Devbook.</span>
@@ -90,7 +90,7 @@ export default function Menu() {
 					<div className="menu-dropdown__item flex__column__start gap__y16">
 						{/*gaming*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.gaming} alt="gaming" />
+							<img src={headerImages.gaming} alt="gaming" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Gaming</h4>
 								<span>Watch gaming streams.</span>
@@ -98,7 +98,7 @@ export default function Menu() {
 						</div>
 						{/*play*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.play} alt="play" />
+							<img src={headerImages.play} alt="play" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Play</h4>
 								<span>Play games on Devbook.</span>
@@ -106,7 +106,7 @@ export default function Menu() {
 						</div>
 						{/*watch*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.watch} alt="watch" />
+							<img src={headerImages.watch} alt="watch" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Watch</h4>
 								<span>Watch videos on Devbook.</span>
@@ -114,7 +114,7 @@ export default function Menu() {
 						</div>
 						{/*live*/}
 						<div className="flex__row__start gap__x8">
-							<img src={images.live} alt="live" />
+							<img src={headerImages.live} alt="live" />
 							<div className="menu-dropdown__column flex__column__start gap__y4">
 								<h4>Live</h4>
 								<span>Watch popular live videos.</span>
@@ -127,7 +127,7 @@ export default function Menu() {
 						<div className="menu-dropdown__item flex__column__start gap__y16">
 							{/*pay*/}
 							<div className="flex__row__start gap__x8">
-								<img src={images.pay} alt="pay" />
+								<img src={headerImages.pay} alt="pay" />
 								<div className="menu-dropdown__column flex__column__start gap__y4">
 									<h4>Pay</h4>
 									<span>Devbook secure pay system.</span>
@@ -135,7 +135,7 @@ export default function Menu() {
 							</div>
 							{/*marketplace*/}
 							<div className="flex__row__start gap__x8">
-								<img src={images.marketplace} alt="marketplace" />
+								<img src={headerImages.marketplace} alt="marketplace" />
 								<div className="menu-dropdown__column flex__column__start gap__y4">
 									<h4>Marketplace</h4>
 									<span>Buy and sell on Devbook.</span>
@@ -148,7 +148,7 @@ export default function Menu() {
 							<div className="menu-dropdown__item flex__column__start gap__y16">
 								{/*recentad*/}
 								<div className="flex__row__start gap__x8">
-									<img src={images.recentad} alt="recentad" />
+									<img src={headerImages.recentad} alt="recentad" />
 									<div className="menu-dropdown__column flex__column__start gap__y4">
 										<h4>Recent Ad activity</h4>
 										<span>See all the ads you interacted.</span>
@@ -156,7 +156,7 @@ export default function Menu() {
 								</div>
 								{/*memories*/}
 								<div className="flex__row__start gap__x8">
-									<img src={images.memories} alt="memories" />
+									<img src={headerImages.memories} alt="memories" />
 									<div className="menu-dropdown__column flex__column__start gap__y4">
 										<h4>Memories</h4>
 										<span>Browde your old posts.</span>
@@ -164,7 +164,7 @@ export default function Menu() {
 								</div>
 								{/*saved*/}
 								<div className="flex__row__start gap__x8">
-									<img src={images.saved} alt="saved" />
+									<img src={headerImages.saved} alt="saved" />
 									<div className="menu-dropdown__column flex__column__start gap__y4">
 										<h4>Saved</h4>
 										<span>Find posts that you saved.</span>
@@ -178,7 +178,7 @@ export default function Menu() {
 							<div className="menu-dropdown__item flex__column__start gap__y16">
 								{/*ads*/}
 								<div className="flex__row__start gap__x8">
-									<img src={images.ads} alt="ads" />
+									<img src={headerImages.ads} alt="ads" />
 									<div className="menu-dropdown__column flex__column__start gap__y4">
 										<h4>Ads Manager</h4>
 										<span>Create or manage your ads.</span>
@@ -192,7 +192,7 @@ export default function Menu() {
 							<div className="menu-dropdown__item flex__column__start gap__y16">
 								{/*climate*/}
 								<div className="flex__row__start gap__x8">
-									<img src={images.climate} alt="climate" />
+									<img src={headerImages.climate} alt="climate" />
 									<div className="menu-dropdown__column flex__column__start gap__y4">
 										<h4>Climate Science</h4>
 										<span>Learn about climate change.</span>
@@ -200,7 +200,7 @@ export default function Menu() {
 								</div>
 								{/*covid*/}
 								<div className="flex__row__start gap__x8">
-									<img src={images.covid} alt="covid" />
+									<img src={headerImages.covid} alt="covid" />
 									<div className="menu-dropdown__column flex__column__start gap__y4">
 										<h4>COVID-19</h4>
 										<span>See COVID-19 informations.</span>
@@ -208,7 +208,7 @@ export default function Menu() {
 								</div>
 								{/*community*/}
 								<div className="flex__row__start gap__x8">
-									<img src={images.community} alt="community" />
+									<img src={headerImages.community} alt="community" />
 									<div className="menu-dropdown__column flex__column__start gap__y4">
 										<h4>Community Help</h4>
 										<span>Get involved in your community.</span>
@@ -216,7 +216,7 @@ export default function Menu() {
 								</div>
 								{/*emotional*/}
 								<div className="flex__row__start gap__x8">
-									<img src={images.emotional} alt="emotional" />
+									<img src={headerImages.emotional} alt="emotional" />
 									<div className="menu-dropdown__column flex__column__start gap__y4">
 										<h4>Emotional Health</h4>
 										<span>Emotional health informations.</span>
@@ -224,7 +224,7 @@ export default function Menu() {
 								</div>
 								{/*fund*/}
 								<div className="flex__row__start gap__x8">
-									<img src={images.fund} alt="fund" />
+									<img src={headerImages.fund} alt="fund" />
 									<div className="menu-dropdown__column flex__column__start gap__y4">
 										<h4>Fundraisers</h4>
 										<span>Donate and raise money.</span>

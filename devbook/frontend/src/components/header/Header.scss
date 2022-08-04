@@ -103,7 +103,7 @@
 			cursor: pointer;
 		}
 		.header__profile {
-			img {
+			.header__profile-icon {
 				@include scaleBorderRadius(8rem, 1280px);
 			}
 			span {
@@ -181,4 +181,8 @@
 	.cursor-default {
 		cursor: default !important;
 	}
+}
+.user__menu {
+	position: absolute;
+	@include scaleMargin(2rem, 4rem, 0, 0, 1280px);
 }

@@ -1,6 +1,3 @@
-import login_logo from "../assets/login/login_logo.png";
-import login_cyborg from "../assets/login/login_cyborg.png";
-import register_arrow_down from "../assets/login/register_arrow_down.svg";
 import header_logo from "../assets/header/header_logo.svg";
 import header_search_icon from "../assets/header/header_search_icon.svg";
 import header_home_icon from "../assets/header/header_home_icon.svg";
@@ -56,9 +53,6 @@ import seetings from "../assets/header/user_menu/seetings.svg";
 import support from "../assets/header/user_menu/support.svg";
 
 export default {
-	login_logo,
-	login_cyborg,
-	register_arrow_down,
 	header_logo,
 	header_search_icon,
 	header_home_icon,

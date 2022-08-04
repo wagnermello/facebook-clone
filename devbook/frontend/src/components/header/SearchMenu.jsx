@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import images from "../../constants/images";
+import headerImages from "../../constants/headerImages";
 import "./Header.scss";
 import useClickOutside from "../../helpers/clickOutside";
 
@@ -14,7 +14,7 @@ export default function SearchMenu({ setShowSearchMenu }) {
 		<div className="header__left search__area scroll_bar" ref={menu}>
 			<div className="flex__row__center gap__x16">
 				<img
-					src={images.header_arrow_left}
+					src={headerImages.header_arrow_left}
 					alt="back"
 					onClick={() => {
 						setShowSearchMenu(false);
@@ -29,7 +29,7 @@ export default function SearchMenu({ setShowSearchMenu }) {
 					<input type="text" placeholder="Search on Devbook" ref={input} />
 
 					<img
-						src={images.header_search_icon}
+						src={headerImages.header_search_icon}
 						alt=""
 						className="cursor-default"
 					/>

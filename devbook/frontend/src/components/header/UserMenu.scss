@@ -4,12 +4,13 @@
 .user-menu {
 	position: absolute;
 	background-color: $white-color;
-	@include scaleMargin(2rem, 4rem, 0, 0, 1280px);
+	@include scaleMargin(2rem, 20rem, 0, 0, 1280px);
 	@include scaleWidth(280px, 1280px);
 	@include scalePadding(1rem, 1rem, 1rem, 1rem, 1280px);
 	@include scaleBoxShadow(2px, 2px, 8px, 0, 1280px);
 	@include scaleBorderRadius(0.5rem, 1280px);
 	z-index: 1;
+	top: 0;
 
 	.user-menu__header {
 		justify-content: center !important;
@@ -62,7 +63,20 @@
 
 .user-menu__settings {
 	span {
-		@include scaleFontSize(1.25rem, 1280px);
+		@include scaleFontSize(1rem, 1280px);
+		font-weight: 600;
+		color: $dark-purple-1;
+		line-height: 0 !important;
+	}
+	img {
+		height: 100% !important;
+		@include scaleWidth(0.875rem, 1280px);
+	}
+}
+
+.user-menu__support {
+	span {
+		@include scaleFontSize(1rem, 1280px);
 		font-weight: 600;
 		color: $dark-purple-1;
 		line-height: 0 !important;
