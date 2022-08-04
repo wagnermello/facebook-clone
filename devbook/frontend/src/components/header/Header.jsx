@@ -7,6 +7,7 @@ import SearchMenu from "./SearchMenu";
 import { useRef, useState } from "react";
 import Menu from "./Menu";
 import useClickOutside from "../../helpers/clickOutside";
+import UserMenu from "./UserMenu";
 
 export default function Header() {
 	const { user } = useSelector((user) => ({
@@ -14,9 +15,14 @@ export default function Header() {
 	}));
 	const [showSearchMenu, setShowSearchMenu] = useState(false);
 	const [showMenu, setShowMenu] = useState(false);
+	const [showUserMenu, setShowUserMenu] = useState(false);
 	const menu = useRef(null);
+	const userMenu = useRef(null);
 	useClickOutside(menu, () => {
 		setShowMenu(false);
+	});
+	useClickOutside(userMenu, () => {
+		setShowUserMenu(false);
 	});
 
 	return (
@@ -79,9 +85,17 @@ export default function Header() {
 					<div className="notification-1digit">7</div>
 				</Link>
 				<Link to="/" className="header__profile flex__row__center gap__x8">
-					<img src={user?.picture} alt="profile" />
+					<img
+						src={user?.picture}
+						alt="profile"
+						ref={userMenu}
+						onClick={() => {
+							setShowUserMenu((prev) => !prev);
+						}}
+					/>
 					<span>{user?.first_name}</span>
 				</Link>
+				{showUserMenu && <UserMenu user={user} />}
 			</div>
 		</header>
 	);

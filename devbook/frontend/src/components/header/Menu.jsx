@@ -12,6 +12,8 @@ export default function Menu() {
 				<img src={images.header_search_icon} alt="" />
 			</div>
 			<div className="menu-dropdown__container flex__column__start gap__y16">
+				<div className="menu-dropdown__splitter"></div>
+
 				<div className="menu-dropdown__item-container flex__column__start gap__y16">
 					{/*-----SOCIAL-----*/}
 					<h3>Social</h3>

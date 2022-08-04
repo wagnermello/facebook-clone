@@ -42,6 +42,19 @@ import saved from "../assets/header/menu/saved.png";
 import watch from "../assets/header/menu/watch.png";
 import weather from "../assets/header/menu/weather.png";
 
+/*-----USER-MENU-ICONS-----*/
+import activity from "../assets/header/user_menu/activity.svg";
+import arrow_back from "../assets/header/user_menu/arrow_back.svg";
+import feed_user_menu from "../assets/header/user_menu/feed.svg";
+import feedback from "../assets/header/user_menu/feedback.svg";
+import help from "../assets/header/user_menu/help.svg";
+import language from "../assets/header/user_menu/language.svg";
+import logout from "../assets/header/user_menu/logout.svg";
+import privacy from "../assets/header/user_menu/privacy.svg";
+import report from "../assets/header/user_menu/report.svg";
+import seetings from "../assets/header/user_menu/seetings.svg";
+import support from "../assets/header/user_menu/support.svg";
+
 export default {
 	login_logo,
 	login_cyborg,
@@ -56,6 +69,8 @@ export default {
 	header_menu_icon,
 	header_notifications_icon,
 	header_arrow_left,
+
+	/*-----MENU-ICONS-----*/
 	ad,
 	ads,
 	campus,
@@ -84,4 +99,17 @@ export default {
 	saved,
 	watch,
 	weather,
+
+	/*-----USER-MENU-ICONS-----*/
+	activity,
+	arrow_back,
+	feed_user_menu,
+	feedback,
+	help,
+	language,
+	logout,
+	privacy,
+	report,
+	seetings,
+	support,
 };

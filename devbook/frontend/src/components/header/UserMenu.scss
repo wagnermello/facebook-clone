@@ -1,0 +1,74 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+.user-menu {
+	position: absolute;
+	background-color: $white-color;
+	@include scaleMargin(2rem, 4rem, 0, 0, 1280px);
+	@include scaleWidth(280px, 1280px);
+	@include scalePadding(1rem, 1rem, 1rem, 1rem, 1280px);
+	@include scaleBoxShadow(2px, 2px, 8px, 0, 1280px);
+	@include scaleBorderRadius(0.5rem, 1280px);
+	z-index: 1;
+
+	.user-menu__header {
+		justify-content: center !important;
+
+		img {
+			@include scaleWidth(3rem, 1280px);
+			@include scaleHeight(3rem, 1280px);
+			@include scaleBorderRadius(10rem, 1280px);
+		}
+		span {
+			@include scaleFontSize(1rem, 1280px);
+			font-weight: 600;
+			color: $dark-purple-1;
+			line-height: 0 !important;
+		}
+		p {
+			@include scaleFontSize(0.75rem, 1280px);
+			font-weight: 400;
+			color: $gray-color;
+			line-height: 0 !important;
+		}
+	}
+
+	.user-menu__items {
+		cursor: pointer;
+
+		.user-menu__icon-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			@include scaleWidth(1rem, 1280px);
+			img {
+				@include scaleHeight(1rem, 1280px);
+			}
+		}
+		span {
+			@include scaleFontSize(0.875rem, 1280px);
+			font-weight: 600;
+			color: $dark-purple-2;
+		}
+	}
+}
+
+.user-menu__splitter {
+	@include scaleHeight(0.5px, 1280px);
+	background-color: $light-gray-2;
+	width: 100%;
+}
+
+.user-menu__settings {
+	span {
+		@include scaleFontSize(1.25rem, 1280px);
+		font-weight: 600;
+		color: $dark-purple-1;
+		line-height: 0 !important;
+	}
+	img {
+		height: 100% !important;
+		@include scaleWidth(0.875rem, 1280px);
+	}
+}
