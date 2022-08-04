@@ -9,7 +9,6 @@ export default function HomePage() {
 	const element = useRef(null);
 	useClickOutside(element, () => {
 		setVisible(false);
-		console.log("you clicked outide");
 	});
 	return (
 		<div>

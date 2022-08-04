@@ -7,7 +7,6 @@ import UserMenuSupport from "./UserMenuSupport";
 
 export default function UserMenu({ user }) {
 	const [visible, setVisible] = useState(0);
-	console.log(visible);
 
 	return (
 		<div className="user-menu flex__column__start gap__y16">

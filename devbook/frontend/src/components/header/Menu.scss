@@ -6,6 +6,9 @@
 	justify-content: flex-start !important;
 	background-color: $white-color;
 	@include scaleMargin(2rem, 17rem, 0, 0, 1280px);
+	@media screen and (max-width: 680px) {
+		margin: 3rem -3rem 0 0;
+	}
 	height: 70vh;
 	@include scaleWidth(280px, 1280px);
 	@include scalePadding(0.5rem, 1rem, 0.5rem, 1rem, 1280px);
