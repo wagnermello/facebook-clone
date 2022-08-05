@@ -1,0 +1,81 @@
+@import "../../../styles/colors";
+@import "../../../styles/scale-function";
+
+.home__middle-container {
+	width: 100%;
+	.stories__container {
+		width: 100%;
+	}
+
+	/*-----STORIES-----*/
+	.stories__container {
+		.stories__create-story-card {
+			@include scaleWidth(108px, 1280px);
+			@include scaleHeight(174px, 1280px);
+			@include scaleBorderRadius(0.75rem, 1280px);
+			background-color: $dark-purple-1;
+			overflow: hidden;
+			cursor: pointer;
+
+			.create-story-card__image {
+				display: flex;
+
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				img {
+					@include scaleHeight(134px, 1280px);
+					filter: brightness(90%);
+				}
+			}
+			.create-story__icon__container {
+				.create-story__icon {
+					@include scaleWidth(2rem, 1280px);
+					@include scaleMargin(-1rem, 0, 0, 0, 1280px);
+					z-index: 1;
+				}
+			}
+		}
+
+		.story__card {
+			position: relative;
+			@include scaleWidth(108px, 1280px);
+			@include scaleHeight(174px, 1280px);
+			@include scaleBorderRadius(0.75rem, 1280px);
+
+			overflow: hidden;
+			cursor: pointer;
+			img {
+				object-fit: cover;
+				transition: all 0.3s;
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+
+			.story__profile-picture {
+				position: absolute;
+				top: 0;
+
+				img {
+					@include scaleWidth(2rem, 1280px);
+					@include scaleMargin(0.5rem, 0.5rem, 0.5rem, 0.5rem, 1280px);
+				}
+			}
+
+			.story__profile-name {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				bottom: 0;
+				@include scaleMargin(0.5rem, 0.5rem, 0.5rem, 0.5rem, 1280px);
+
+				text-align: left;
+				@include scaleFontSize(0.875rem, 1280px);
+				font-weight: 600;
+				color: $white-color;
+				word-break: break-word;
+			}
+		}
+	}
+}

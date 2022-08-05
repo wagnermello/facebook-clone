@@ -1,5 +1,5 @@
-@import "../../styles/colors";
-@import "../../styles/scale-function";
+@import "../../../styles/colors";
+@import "../../../styles/scale-function";
 
 .home__left-container {
 	.home__left-container__profile {
@@ -19,6 +19,7 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		cursor: pointer;
 
 		.left__icon__container {
 			display: flex;
@@ -40,9 +41,14 @@
 
 .home__left-container__splitter {
 	@include scaleHeight(0.5px, 1280px);
+	@include scaleWidth(274px, 1280px);
 	background-color: $light-gray-2;
-	width: 100%;
 }
 
-.home__left-container__shortcuts {
+.home__left-container__copyright {
+	color: $gray-color;
+	@include scaleFontSize(0.75rem, 1280px);
+	bottom: 0;
+	@include scaleMargin(0, 0, 1rem, 0, 1280px);
+	position: absolute !important;
 }

@@ -10,6 +10,14 @@ import watch from "../assets/home/left/watch.svg";
 import my_instagram from "../assets/home/left/my_instagram.svg";
 import my_page from "../assets/home/left/my_page.svg";
 
+import sponsored_1 from "../assets/home/right/sponsored_1.jpg";
+import sponsored_2 from "../assets/home/right/sponsored_2.jpg";
+import horizontal_dots from "../assets/home/right/horizontal_dots.svg";
+import live_video from "../assets/home/right/live_video.svg";
+import search_icon from "../assets/home/right/search_icon.svg";
+
+import add_story from "../assets/home/middle/add_story.svg";
+
 export default {
 	events,
 	friends,
@@ -22,4 +30,12 @@ export default {
 	watch,
 	my_instagram,
 	my_page,
+
+	sponsored_1,
+	sponsored_2,
+	horizontal_dots,
+	live_video,
+	search_icon,
+
+	add_story,
 };
