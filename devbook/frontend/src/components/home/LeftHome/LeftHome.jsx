@@ -3,7 +3,6 @@ import "./LeftHome.scss";
 import LeftHomeMenu from "./LeftHomeMenu";
 import LeftHomeShortcuts from "./LeftHomeShortcuts";
 import LeftHomeCopyright from "./LeftHomeCopyright";
-import { useSelector } from "react-redux";
 
 export default function LeftHome({ user }) {
 	return (

@@ -17,6 +17,9 @@ import live_video from "../assets/home/right/live_video.svg";
 import search_icon from "../assets/home/right/search_icon.svg";
 
 import add_story from "../assets/home/middle/add_story.svg";
+import live_coding from "../assets/home/middle/live_coding.svg";
+import photo_video from "../assets/home/middle/photo_video.svg";
+import professional from "../assets/home/middle/professional.svg";
 
 export default {
 	events,
@@ -38,4 +41,7 @@ export default {
 	search_icon,
 
 	add_story,
+	live_coding,
+	photo_video,
+	professional,
 };

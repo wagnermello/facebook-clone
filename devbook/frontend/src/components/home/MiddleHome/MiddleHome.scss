@@ -46,6 +46,7 @@
 			overflow: hidden;
 			cursor: pointer;
 			img {
+				width: 100%;
 				object-fit: cover;
 				transition: all 0.3s;
 				&:hover {
@@ -75,6 +76,56 @@
 				font-weight: 600;
 				color: $white-color;
 				word-break: break-word;
+			}
+		}
+	}
+
+	/*-----CREATE-POST-----*/
+	.create-post {
+		@include scaleWidth(574px, 1280px);
+		@include scaleBorderRadius(0.5rem, 1280px);
+		@include scalePadding(1rem, 1rem, 1rem, 1rem, 1280px);
+		background-color: $dark-purple-1;
+
+		.create-post__header {
+			width: 100%;
+			text-align: left;
+			img {
+				@include scaleWidth(2.5rem, 1280px);
+				border-radius: 50%;
+			}
+			.create-post__input {
+				color: $light-gray;
+				background-color: $white-color;
+				width: 100%;
+				@include scalePadding(0.5rem, 0.5rem, 0.5rem, 0.5rem, 1280px);
+				@include scaleBorderRadius(0.5rem, 1280px);
+				@include scaleFontSize(1rem, 1280px);
+			}
+		}
+		.create-post__splitter {
+			@include scaleHeight(0.5px, 1280px);
+			width: 100%;
+			background-color: $light-gray-2;
+			opacity: 50%;
+		}
+		.create-post__footer {
+			justify-content: space-between;
+			width: 100%;
+			.create-post__footer__item {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+
+				img {
+					@include scaleWidth(1rem, 1280px);
+				}
+				span {
+					@include scaleFontSize(1rem, 1280px);
+					font-weight: 500;
+					color: $white-color;
+				}
 			}
 		}
 	}
