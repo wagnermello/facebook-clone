@@ -59,25 +59,28 @@
 			color: $dark-purple-2;
 		}
 	}
+
+	.user-menu__settings {
+		span {
+			@include scaleFontSize(1rem, 1280px);
+			font-weight: 600;
+			color: $dark-purple-1;
+			line-height: 0 !important;
+		}
+		img {
+			@media screen and (min-width: 1280px) {
+				height: 100% !important;
+			}
+			@include scaleWidth(0.875rem, 1280px);
+			margin: 0 auto;
+		}
+	}
 }
 
 .user-menu__splitter {
 	@include scaleHeight(0.5px, 1280px);
 	background-color: $light-gray-2;
 	width: 100%;
-}
-
-.user-menu__settings {
-	span {
-		@include scaleFontSize(1rem, 1280px);
-		font-weight: 600;
-		color: $dark-purple-1;
-		line-height: 0 !important;
-	}
-	img {
-		height: 100% !important;
-		@include scaleWidth(0.875rem, 1280px);
-	}
 }
 
 .user-menu__support {

@@ -1,12 +1,23 @@
 import "./UserMenu.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import headerImages from "../../constants/headerImages";
 import React, { useState } from "react";
 import UserMenuSettings from "./UserMenuSettings";
 import UserMenuSupport from "./UserMenuSupport";
+import { useDispatch } from "react-redux";
+import Cookies from "js-cookie";
 
 export default function UserMenu({ user }) {
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const [visible, setVisible] = useState(0);
+	const logout = () => {
+		Cookies.set("user", "");
+		dispatch({
+			type: "LOGOUT",
+		});
+		navigate("/login");
+	};
 
 	return (
 		<div className="user-menu flex__column__start gap__y16">
@@ -54,7 +65,12 @@ export default function UserMenu({ user }) {
 							</div>
 							<span>Support</span>
 						</div>
-						<div className="flex__row__start gap__x8">
+						<div
+							className="flex__row__start gap__x8"
+							onClick={() => {
+								logout();
+							}}
+						>
 							<div className="user-menu__icon-container">
 								<img src={headerImages.logout} alt="logout" />
 							</div>
