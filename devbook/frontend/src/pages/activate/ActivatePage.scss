@@ -34,7 +34,7 @@
 		position: absolute !important;
 		width: 100%;
 		z-index: 99;
-		@include scaleMargin(22rem, 0, 8rem, 1rem, 1280px);
+		@include scaleMargin(22rem, 0, 8rem, 1em, 1280px);
 	}
 
 	.activate__success-text {

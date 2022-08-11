@@ -41,9 +41,9 @@ export default function ActivatePage() {
 				type: "VERIFY",
 				payload: true,
 			});
-			// setTimeout(() => {
-			// 	navigate("/");
-			// }, 3000);
+			setTimeout(() => {
+				navigate("/");
+			}, 3000);
 		} catch (error) {
 			setError(error.response.data.message);
 		}
