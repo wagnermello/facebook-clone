@@ -20,6 +20,8 @@ import add_story from "../assets/home/middle/add_story.svg";
 import live_coding from "../assets/home/middle/live_coding.svg";
 import photo_video from "../assets/home/middle/photo_video.svg";
 import professional from "../assets/home/middle/professional.svg";
+import activate from "../assets/home/activate/activate.svg";
+import failed from "../assets/home/activate/failed.svg";
 
 export default {
 	events,
@@ -44,4 +46,7 @@ export default {
 	live_coding,
 	photo_video,
 	professional,
+
+	activate,
+	failed,
 };

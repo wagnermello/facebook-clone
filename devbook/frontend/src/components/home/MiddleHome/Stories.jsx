@@ -25,7 +25,7 @@ export default function Stories({ user }) {
 				</div>
 			</div>
 			{stories.slice(0, max).map((story, i) => (
-				<Story story={story} />
+				<Story story={story} key={i} />
 			))}
 		</div>
 	);

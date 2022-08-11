@@ -1,0 +1,59 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+.activate__popup {
+	height: 100vh;
+	animation: fadein 0.3s ease-in alternate;
+
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	.activate__popup__header {
+		text-align: center;
+		z-index: 150 !important;
+		position: absolute !important;
+		color: $white-color;
+		width: 100%;
+		z-index: 99;
+		@include scaleMargin(0rem, 0, 0rem, 1rem, 1280px);
+
+		img {
+			@include scaleWidth(64px, 1280px);
+			@include scaleMargin(-1.5rem, 0, 8rem, 0, 1280px);
+		}
+	}
+	.activate__popup__message {
+		text-align: center;
+		color: $white-color;
+		z-index: 150 !important;
+		position: absolute !important;
+		width: 100%;
+		z-index: 99;
+		@include scaleMargin(22rem, 0, 8rem, 1rem, 1280px);
+	}
+
+	.activate__success-text {
+		color: $white-color;
+	}
+}
+
+.activate__spinner__container {
+	position: absolute !important;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(10, 1, 25, 0.75);
+	z-index: 99;
+	transition: all 0.3s ease-in-out;
+
+	.activate__spinner {
+		@include scaleTransformScale(1, 1280px);
+	}
+}
