@@ -2,6 +2,17 @@
 @import "../../../styles/scale-function";
 
 .home__left-container {
+	@include scaleWidth(274px, 1280px);
+	@media screen and (max-width: 1280px) {
+		width: 240px;
+	}
+	@media screen and (max-width: 880px) {
+		width: auto;
+	}
+	@media screen and (max-width: 680px) {
+		display: none;
+	}
+
 	.home__left-container__profile {
 		justify-content: center !important;
 		img {
@@ -12,6 +23,9 @@
 			@include scaleFontSize(1rem, 1280px);
 			color: $dark-purple-1;
 			font-weight: 700;
+			@media screen and (max-width: 880px) {
+				display: none;
+			}
 		}
 	}
 	.home__left-container__item {
@@ -35,6 +49,14 @@
 			color: $dark-purple-1;
 			@include scaleFontSize(1rem, 1280px);
 			font-weight: 600;
+			@media screen and (max-width: 880px) {
+				display: none;
+			}
+		}
+	}
+	h3 {
+		@media screen and (max-width: 880px) {
+			display: none;
 		}
 	}
 }
@@ -42,6 +64,12 @@
 .home__left-container__splitter {
 	@include scaleHeight(0.5px, 1280px);
 	@include scaleWidth(274px, 1280px);
+	@media screen and (max-width: 1280px) {
+		width: 240px;
+	}
+	@media screen and (max-width: 880px) {
+		display: none;
+	}
 	background-color: $light-gray-2;
 }
 

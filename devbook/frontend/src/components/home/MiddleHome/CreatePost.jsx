@@ -11,7 +11,7 @@ export default function createPost({ user }) {
 				</div>
 			</div>
 			<div className="create-post__splitter"></div>
-			<div className="create-post__footer flex__row">
+			<div className="create-post__footer flex__row gap__x16">
 				<div className="create-post__footer__item gap__x8">
 					<img src={homeImages.live_coding} alt="live coding" />
 					<span>Live coding</span>
@@ -22,7 +22,7 @@ export default function createPost({ user }) {
 				</div>
 				<div className="create-post__footer__item gap__x8">
 					<img src={homeImages.professional} alt="professional achievement" />
-					<span>Photo/video</span>
+					<span>Professional achievement</span>
 				</div>
 			</div>
 		</div>

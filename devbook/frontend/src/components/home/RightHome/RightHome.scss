@@ -3,6 +3,13 @@
 
 .home__right-container {
 	@include scaleWidth(274px, 1280px);
+	@media screen and (max-width: 1280px) {
+		width: 196px;
+	}
+	@media screen and (max-width: 1080px) {
+		display: none;
+	}
+
 	.home__right__sponsored-container {
 		.sponsored__items {
 			cursor: pointer;

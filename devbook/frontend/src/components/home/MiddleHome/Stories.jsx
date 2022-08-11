@@ -2,8 +2,13 @@ import React from "react";
 import homeImages from "../../../constants/homeImages";
 import { stories } from "../../../data/home";
 import Story from "./Story";
+import { useMediaQuery } from "react-responsive";
 
 export default function Stories({ user }) {
+	const query880px = useMediaQuery({
+		query: "(max-width: 880px)",
+	});
+	const max = query880px ? 3 : stories.length;
 	return (
 		<div className="stories__container flex__row__center gap__x8">
 			{/*-----CREATE-STORIES-CARD-----*/}
@@ -19,8 +24,7 @@ export default function Stories({ user }) {
 					/>
 				</div>
 			</div>
-			{/*-----FRIENDS-STORIES-CARD-----*/}
-			{stories.map((story, i) => (
+			{stories.slice(0, max).map((story, i) => (
 				<Story story={story} />
 			))}
 		</div>
