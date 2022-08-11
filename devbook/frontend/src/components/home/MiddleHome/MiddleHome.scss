@@ -98,6 +98,40 @@
 	}
 }
 
+/*-----SEND-VERIFICATION-----*/
+.send-verification {
+	@include scaleWidth(574px, 1280px);
+	@include scaleFontSize(1rem, 1280px);
+
+	@media screen and (max-width: 880px) {
+		width: 458px !important;
+		margin: 0 auto;
+	}
+	@media screen and (max-width: 496px) {
+		width: 100% !important;
+		margin: 0 auto;
+	}
+
+	span {
+		color: $gray-color;
+	}
+
+	a {
+		color: $medium-purple;
+		font-weight: 600;
+		cursor: pointer;
+	}
+}
+
+.success-text {
+	color: green !important;
+}
+
+.error-text {
+	color: green !important;
+	@include scaleMargin(1rem, 0, 0, 0, 1280px);
+}
+
 /*-----CREATE-POST-----*/
 .create-post {
 	@include scaleWidth(574px, 1280px);

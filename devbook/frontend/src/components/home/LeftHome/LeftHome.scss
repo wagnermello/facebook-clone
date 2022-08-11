@@ -78,5 +78,5 @@
 	@include scaleFontSize(0.75rem, 1280px);
 	bottom: 0;
 	@include scaleMargin(0, 0, 1rem, 0, 1280px);
-	position: absolute !important;
+	position: relative;
 }
