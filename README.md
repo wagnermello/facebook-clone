@@ -11,6 +11,15 @@
 
 #
 
+<h3> Other Technologies: 
+<h3>
+<img src="https://s-media-cache-ak0.pinimg.com/736x/80/c9/de/80c9de50efbe9eb3676d4e27bb293ade.jpg" height="75" width="75"/>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_HXX3PVXXG4_3nbFx4WXyr3BjkqxW3GEV6pmi5G4Ev0rtiXiVFNvvwiriM8FrzX03F3E&usqp=CAU" height="75" width="75"/>
+<img src="https://user-images.githubusercontent.com/2676579/34940598-17cc20f0-f9be-11e7-8c6d-f0190d502d64.png" height="75" width="75"/>
+<img src="https://cdn-images-1.medium.com/max/1600/1*Vo5RDpNkOsfDn8sx06mthA.png?is-pending-load=1" height="75" width="75"/>
+<img src="https://th.bing.com/th/id/R.dad47e5375e6bf227413aec5e3b932e6?rik=uaek5RI5nzigRg&riu=http%3a%2f%2fwww.gcppodcast.com%2fimages%2flogo_large.png&ehk=FWizHazUA9qq%2fgBfbyx5QSxzAtq1beRW0PdDY0HPAsc%3d&risl=&pid=ImgRaw&r=0" height="75" width="75"/>
+</h3>
+
 <img src="https://media3.giphy.com/media/fZDXPWad3Rhx0H0gDp/source.gif" height="75" width="75"/>
 
 #
