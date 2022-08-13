@@ -77,11 +77,18 @@
 		}
 
 		.recover__form__buttons {
-			display: flex !important;
-			flex-direction: row !important;
+			width: 100%;
+			@include scaleMargin(0.75rem, 0, 0, 0, 1280px);
+			button {
+				@include scaleWidth(128px, 1280px);
+				@include scalePadding(0.5rem, 0, 0.5rem, 0, 1280px);
+				@include scaleBoxShadow2(0, 0, 4px, 4px, 1280px);
+			}
+		}
+		.recover__form__buttons-right {
 			justify-content: flex-end !important;
 			width: 100%;
-			@include scaleMargin(0.5rem, 0, 0, 0, 1280px);
+			@include scaleMargin(0.75rem, 0, 0, 0, 1280px);
 			button {
 				@include scaleWidth(128px, 1280px);
 				@include scalePadding(0.5rem, 0, 0.5rem, 0, 1280px);
