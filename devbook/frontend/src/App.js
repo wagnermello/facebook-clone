@@ -6,6 +6,7 @@ import LoginPage from "./pages/login/LoginPage";
 import ProfilePage from "./pages/profile/ProfilePage";
 import LoggedInRoutes from "./routes/LoggedInRoutes";
 import NotLoggedInRoutes from "./routes/NotLoggedInRoutes";
+import RecoverPage from "./pages/recover/RecoverPage";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Route element={<NotLoggedInRoutes />}>
 					<Route path="/login" element={<LoginPage />} exact />
 				</Route>
+				<Route path="recover" element={<RecoverPage />} />
 			</Routes>
 		</div>
 	);

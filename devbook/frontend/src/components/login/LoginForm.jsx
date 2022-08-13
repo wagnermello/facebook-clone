@@ -86,7 +86,7 @@ export default function LoginForm({ setVisible }) {
 				)}
 			</Formik>
 			{error && <div className="login_error_text">{error}</div>}
-			<Link className="forgotten_password" to="/forgot">
+			<Link className="forgotten_password" to="/recover">
 				Forgotten password?
 			</Link>
 			<div className="sign-splitter"></div>

@@ -1,0 +1,92 @@
+@import "../../styles/colors";
+@import "../../styles/scale-function";
+
+.recover {
+	height: 100vh;
+	background-image: linear-gradient(
+			rgb(133, 7, 217, 0.75),
+			rgb(21, 1, 45, 0.75)
+		),
+		url("../../assets/login/login_background_image.jpg");
+	background-size: cover;
+	background-position: right;
+	background-repeat: no-repeat;
+
+	@media screen and (max-width: 460px) {
+		background-image: linear-gradient(
+				rgb(133, 7, 217, 0.75),
+				rgb(21, 1, 45, 0.75)
+			),
+			url("../../assets/login/login_background_image_mobile.jpg");
+		background-size: cover;
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+
+	.recover__header {
+		position: fixed;
+		top: 0;
+		@include scalePadding(0.5rem, 1rem, 0.5rem, 1rem, 1280px);
+		background-color: $white-color;
+		width: 100%;
+		justify-content: space-between !important;
+		align-items: center;
+		@include scaleBoxShadow(4px, 0, 8px, 0, 1280px);
+
+		img {
+			@include scaleHeight(1.5rem, 1280px);
+		}
+
+		button {
+			@include scaleWidth(128px, 1280px);
+			@include scalePadding(0.5rem, 0, 0.5rem, 0, 1280px);
+			@include scaleBoxShadow2(0, 0, 4px, 4px, 1280px);
+		}
+	}
+	.recover__form {
+		@include scaleMargin(auto, 1rem, auto, 1rem, 1280px);
+		background-color: $white-color;
+		@include scaleBoxShadow(0, 0, 4px, 8px, 1280px);
+		@include scaleBorderRadius(0.5rem, 1280px);
+		@include scalePadding(2rem, 2rem, 2rem, 2rem, 1280px);
+
+		h1 {
+			@include scaleFontSize(1.5rem, 1280px);
+			color: $medium-purple;
+			font-weight: 600;
+		}
+
+		p {
+			@include scaleFontSize(1rem, 1280px);
+			color: $gray-color;
+		}
+
+		.recover__input {
+			@include scaleBorderRadius(0.5rem, 1280px);
+			@include scaleBoxShadow2(0, 0, 8px, 4px, 1280px);
+			@include scalePadding(0.5rem, 1rem, 0.5rem, 1rem, 1280px);
+			@include scaleHeight(3rem, 1280px);
+			width: 100%;
+			color: $dark-purple-1;
+
+			&::placeholder {
+				color: $light-gray;
+				font-family: "Montserrat", sans-serif;
+				@include scaleFontSize(1rem, 1280px);
+			}
+		}
+
+		.recover__form__buttons {
+			display: flex !important;
+			flex-direction: row !important;
+			justify-content: flex-end !important;
+			width: 100%;
+			@include scaleMargin(0.5rem, 0, 0, 0, 1280px);
+			button {
+				@include scaleWidth(128px, 1280px);
+				@include scalePadding(0.5rem, 0, 0.5rem, 0, 1280px);
+				@include scaleBoxShadow2(0, 0, 4px, 4px, 1280px);
+			}
+		}
+	}
+}
