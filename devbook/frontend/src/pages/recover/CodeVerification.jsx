@@ -16,7 +16,7 @@ export default function CodeVerification({ code, setCode, error }) {
 			<p>Please enter the code that has been sent to your code.</p>
 
 			<Formik
-				enableInitialize
+				enableReinitialize
 				initialValues={{ code }}
 				validationSchema={validateCode}
 			>

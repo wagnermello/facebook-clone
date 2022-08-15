@@ -18,7 +18,7 @@ export default function SendRecoverEmail({ email, setEmail, error }) {
 			<p>Please enter your email address.</p>
 
 			<Formik
-				enableInitialize
+				enableReinitialize
 				initialValues={{ email }}
 				validationSchema={validateEmail}
 			>

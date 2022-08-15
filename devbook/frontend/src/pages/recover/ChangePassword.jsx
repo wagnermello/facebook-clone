@@ -13,7 +13,7 @@ export default function ChangePassword({
 			<h1>Change Password </h1>
 			<p>Please create your new password.</p>
 
-			<Formik enableInitialize initialValues={{ password, confirmPassword }}>
+			<Formik enableReinitialize initialValues={{ password, confirmPassword }}>
 				{(formik) => (
 					<Form className="width100">
 						<LoginInput
