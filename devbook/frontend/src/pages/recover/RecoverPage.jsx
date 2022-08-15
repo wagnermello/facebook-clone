@@ -6,14 +6,17 @@ import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import SendRecoverEmail from "./SendRecoverEmail";
 import CodeVerification from "./CodeVerification";
+import ChangePassword from "./ChangePassword";
 
 export default function RecoverPage() {
 	const { user } = useSelector((state) => ({ ...state }));
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const [visible, setVisible] = useState(1);
+	const [visible, setVisible] = useState(0);
 	const [email, setEmail] = useState("");
 	const [code, setCode] = useState("");
+	const [password, setPassword] = useState("");
+	const [confirmPassword, setConfirmPassword] = useState("");
 	const [error, setError] = useState("");
 	const logout = () => {
 		Cookies.set("user", "");
@@ -57,6 +60,14 @@ export default function RecoverPage() {
 					code={code}
 					setCode={setCode}
 					error={error}
+				/>
+			)}
+			{visible === 2 && (
+				<ChangePassword
+					password={password}
+					setPassword={setPassword}
+					confirmPassword={confirmPassword}
+					setConfirmPassword={setConfirmPassword}
 				/>
 			)}
 		</div>

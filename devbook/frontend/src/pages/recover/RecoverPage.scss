@@ -95,5 +95,16 @@
 				@include scaleBoxShadow2(0, 0, 4px, 4px, 1280px);
 			}
 		}
+
+		.new-password__input {
+			@include scaleMargin(1rem, 0, 0, 0, 1280px);
+		}
+		.login__input__error {
+			color: $error-color;
+		}
+
+		i {
+			display: none;
+		}
 	}
 }
