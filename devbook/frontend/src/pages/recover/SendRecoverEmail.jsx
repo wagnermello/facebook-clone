@@ -4,6 +4,8 @@ import { Formik, Form } from "formik";
 import LoginInput from "../../components/inputs/LoginInput/LoginInput";
 import * as Yup from "yup";
 
+import { Link } from "react-router-dom";
+
 import axios from "axios";
 
 export default function SendRecoverEmail({
@@ -11,9 +13,10 @@ export default function SendRecoverEmail({
 	setEmail,
 	error,
 	setError,
-	setLoading,
 	setUserInfos,
 	setVisible,
+	loading,
+	setLoading,
 }) {
 	const validateEmail = Yup.object({
 		email: Yup.string()
@@ -34,6 +37,26 @@ export default function SendRecoverEmail({
 		} catch (error) {
 			setLoading(false);
 
+			setError(
+				<div className="input__error account__error">
+					{error.response.data.message}
+				</div>
+			);
+		}
+	};
+	const sendEmail = async () => {
+		try {
+			setLoading(true);
+			await axios.post(
+				`${process.env.REACT_APP_BACKEND_URL}/sendResetPasswordCode`,
+				{
+					email,
+				}
+			);
+			setError("");
+			setVisible(1);
+		} catch (error) {
+			setLoading(false);
 			setError(
 				<div className="input__error account__error">
 					{error.response.data.message}
@@ -65,8 +88,17 @@ export default function SendRecoverEmail({
 						/>
 						{error && <div>{error}</div>}
 						<div className="recover__form__buttons gap__x8 flex__row__center">
-							<button className="button-white">CANCEL</button>
-							<button className="button-purple">CONTINUE</button>
+							<Link to="/login">
+								<button className="button-white">CANCEL</button>
+							</Link>
+							<button
+								onClick={() => {
+									sendEmail();
+								}}
+								className="button-purple"
+							>
+								CONTINUE
+							</button>
 						</div>
 					</Form>
 				)}
