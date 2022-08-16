@@ -14,10 +14,12 @@ export default function RecoverPage() {
 	const navigate = useNavigate();
 	const [visible, setVisible] = useState(0);
 	const [email, setEmail] = useState("");
+	const [loading, setLoading] = useState(false);
 	const [code, setCode] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [error, setError] = useState("");
+	const [userInfos, setUserInfos] = useState("");
 	const logout = () => {
 		Cookies.set("user", "");
 		dispatch({
@@ -25,6 +27,7 @@ export default function RecoverPage() {
 		});
 		navigate("/login");
 	};
+	console.log(userInfos);
 	return (
 		<div className="recover flex__column__center">
 			<div className="recover__header flex__row">
@@ -52,7 +55,15 @@ export default function RecoverPage() {
 				)}
 			</div>
 			{visible === 0 && (
-				<SendRecoverEmail email={email} setEmail={setEmail} error={error} />
+				<SendRecoverEmail
+					email={email}
+					setEmail={setEmail}
+					error={error}
+					setError={setError}
+					setLoading={setLoading}
+					setUserInfos={setUserInfos}
+					setVisible={setVisible}
+				/>
 			)}
 			{visible === 1 && (
 				<CodeVerification
