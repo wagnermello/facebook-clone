@@ -34,6 +34,7 @@ export default function SendRecoverEmail({
 			setUserInfos(data);
 			setVisible(1);
 			setError("");
+			setLoading(false);
 		} catch (error) {
 			setLoading(false);
 
@@ -55,6 +56,7 @@ export default function SendRecoverEmail({
 			);
 			setError("");
 			setVisible(1);
+			setLoading(false);
 		} catch (error) {
 			setLoading(false);
 			setError(

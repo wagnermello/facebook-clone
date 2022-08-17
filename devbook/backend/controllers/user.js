@@ -9,7 +9,6 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const { generateToken } = require("../helpers/tokens");
 const { sendVerificationEmail, sendResetCode } = require("../helpers/mailer");
-const { findOne } = require("../models/User");
 const generateCode = require("../helpers/generateCode");
 
 exports.register = async (req, res) => {
@@ -186,7 +185,7 @@ exports.findUser = async (req, res) => {
 				message: "Account does not exists.",
 			});
 		} else {
-			return res.status(200).json({ email: user });
+			return res.status(200).json({ email: user.email });
 		}
 	} catch (error) {
 		res.status(500).json({ message: error.message });
@@ -199,15 +198,38 @@ exports.sendResetPasswordCode = async (req, res) => {
 		const user = await User.findOne({ email }).select("-password");
 		await Code.findOneAndRemove({ user: user._id });
 		const code = generateCode(5);
-		const saveCode = await new Code({
+		const savedCode = await new Code({
 			code,
 			user: user._id,
 		}).save();
 		sendResetCode(user.email, user.first_name, code);
 		return res.status(200).json({
-			message: "Email reset code has been sent to your e-mail.",
+			message: "Email reset code has been sent to your email",
 		});
 	} catch (error) {
 		res.status(500).json({ message: error.message });
 	}
+};
+
+exports.validateResetCode = async (req, res) => {
+	try {
+		const { email, code } = req.body;
+		const user = await User.findOne({ email }).select("-password");
+		const Dbcode = await Code.findOne({ user: user._id });
+		if (Dbcode.code !== code) {
+			return res.status(400).json({
+				message: "Verification code is wrong.",
+			});
+		}
+		return res.status(200).json({ message: "ok" });
+	} catch (error) {
+		res.status(500).json({ message: error.message });
+	}
+};
+
+exports.changePassword = async (req, res) => {
+	const { email, password } = req.body;
+	const cryptedPassword = await bcrypt.hash(password, 12);
+	await User.findOneAndUpdate({ email }, { password: cryptedPassword });
+	return res.status(200).json({ message: "ok" });
 };

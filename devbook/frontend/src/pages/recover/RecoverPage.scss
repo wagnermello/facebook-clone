@@ -115,3 +115,18 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.recover__spinner__container {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(10, 1, 25, 0.75);
+	z-index: 99;
+	transition: all 0.3s ease-in-out;
+
+	.recover__spinner {
+		@include scaleTransformScale(1, 1280px);
+	}
+}

@@ -71,6 +71,11 @@ export default function RecoverPage() {
 					code={code}
 					setCode={setCode}
 					error={error}
+					setError={setError}
+					setLoading={setLoading}
+					setVisible={setVisible}
+					userInfos={userInfos}
+					setUserInfos={setUserInfos}
 				/>
 			)}
 			{visible === 2 && (
@@ -79,6 +84,13 @@ export default function RecoverPage() {
 					setPassword={setPassword}
 					confirmPassword={confirmPassword}
 					setConfirmPassword={setConfirmPassword}
+					error={error}
+					setError={setError}
+					setLoading={setLoading}
+					setVisible={setVisible}
+					userInfos={userInfos}
+					setUserInfos={setUserInfos}
+					loading={loading}
 				/>
 			)}
 		</div>
