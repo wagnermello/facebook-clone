@@ -9,6 +9,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 
+* {
+	&::-webkit-scrollbar {
+		@include scaleWidth(0.5rem, 1280px);
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $dark-purple-1;
+		@include scaleBorderRadius(1rem, 1280px);
+	}
+}
+
 body {
 	font-family: "Montserrat", sans-serif;
 }

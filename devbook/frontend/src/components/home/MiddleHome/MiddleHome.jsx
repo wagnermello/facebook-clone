@@ -3,6 +3,7 @@ import Stories from "./Stories";
 import CreatePost from "./CreatePost";
 import SendVerification from "./SendVerification";
 import React from "react";
+import CreatePostPopup from "./CreatePostPopup";
 
 export default function MiddleHome({ user }) {
 	return (
@@ -10,6 +11,7 @@ export default function MiddleHome({ user }) {
 			<Stories user={user} />
 			{user.verified === false && <SendVerification user={user} />}
 			<CreatePost user={user} />
+			<CreatePostPopup user={user} />
 		</div>
 	);
 }

@@ -20,6 +20,10 @@ import add_story from "../assets/home/middle/add_story.svg";
 import live_coding from "../assets/home/middle/live_coding.svg";
 import photo_video from "../assets/home/middle/photo_video.svg";
 import professional from "../assets/home/middle/professional.svg";
+import close_icon from "../assets/home/middle/close_icon.svg";
+import pin_icon from "../assets/home/middle/pin_icon.svg";
+import emoji_icon from "../assets/home/middle/emoji_icon.svg";
+
 import activate from "../assets/home/activate/activate.svg";
 import failed from "../assets/home/activate/failed.svg";
 
@@ -46,6 +50,9 @@ export default {
 	live_coding,
 	photo_video,
 	professional,
+	close_icon,
+	pin_icon,
+	emoji_icon,
 
 	activate,
 	failed,

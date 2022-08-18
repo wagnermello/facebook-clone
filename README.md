@@ -39,6 +39,7 @@
 <p><b>npm i googleapis</b> -> connect to google apis</p>
 <p><b>npm i nodemailer</b> -> e-mail sending from NodeJS applications</p>
 <p><b>npm i js-cookie</b> -> setup cookies</p>
+<p><b>npm i emoji-picker-react</b> -> emoji pick package</p>
 
 #
 
