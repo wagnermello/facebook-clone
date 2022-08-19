@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import homeImages from "../../../../constants/homeImages";
 import "./CreatePostPopup.scss";
+import "./EmojiPicker.scss";
 import Picker from "emoji-picker-react";
 import ImagePreview from "./ImagePreview";
 import TextArea from "./TextArea";
@@ -18,6 +19,7 @@ export default function CreatePostPopup({ user }) {
 		const newText = start + emoji + end;
 		setText(newText);
 	};
+	const [images, setImages] = useState([]);
 	return (
 		<div className="create-post white-blur flex__column__center">
 			<div className="create-post__container flex__column gap__y16">
@@ -47,7 +49,11 @@ export default function CreatePostPopup({ user }) {
 							textRef={textRef}
 							user={user}
 						/>
-						<ImagePreview />
+						<ImagePreview
+							images={images}
+							setImages={setImages}
+							setShowImgPrev={setShowImgPrev}
+						/>
 					</>
 				)}
 				<div className="create-post__footer  gap__x16">
