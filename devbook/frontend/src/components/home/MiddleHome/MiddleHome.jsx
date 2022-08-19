@@ -1,9 +1,9 @@
 import "./MiddleHome.scss";
 import Stories from "./Stories";
-import CreatePost from "./CreatePost";
+import CreatePost from "./CreatePostPopup/CreatePost";
 import SendVerification from "./SendVerification";
 import React from "react";
-import CreatePostPopup from "./CreatePostPopup";
+import CreatePostPopup from "./CreatePostPopup/CreatePostPopup";
 
 export default function MiddleHome({ user }) {
 	return (

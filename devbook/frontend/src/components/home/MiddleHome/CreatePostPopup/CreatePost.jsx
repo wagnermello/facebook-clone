@@ -1,5 +1,5 @@
 import React from "react";
-import homeImages from "../../../constants/homeImages";
+import homeImages from "../../../../constants/homeImages";
 
 export default function createPost({ user }) {
 	return (

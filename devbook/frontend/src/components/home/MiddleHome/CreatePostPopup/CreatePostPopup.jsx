@@ -1,11 +1,13 @@
 import React, { useRef, useState } from "react";
-import homeImages from "../../../constants/homeImages";
+import homeImages from "../../../../constants/homeImages";
 import "./CreatePostPopup.scss";
 import Picker from "emoji-picker-react";
+import ImagePreview from "./ImagePreview";
+import TextArea from "./TextArea";
 
 export default function CreatePostPopup({ user }) {
 	const [text, setText] = useState("");
-	const [showPrev, setShowPrev] = useState(false);
+	const [showImgPrev, setShowImgPrev] = useState(false);
 	const [picker, setPicker] = useState(false);
 	const textRef = useRef(null);
 	const handleEmoji = (e, { emoji }) => {
@@ -30,16 +32,23 @@ export default function CreatePostPopup({ user }) {
 						{user.first_name} {user.last_name}
 					</span>
 				</div>
-				{!showPrev && (
-					<div className="create-post__text-area">
-						<textarea
-							ref={textRef}
-							maxLength="100"
-							value={text}
-							placeholder={`What's on your mind, ${user.first_name}?`}
-							onChange={(e) => setText(e.target.value)}
-						></textarea>
-					</div>
+				{!showImgPrev ? (
+					<TextArea
+						text={text}
+						setText={setText}
+						textRef={textRef}
+						user={user}
+					/>
+				) : (
+					<>
+						<TextArea
+							text={text}
+							setText={setText}
+							textRef={textRef}
+							user={user}
+						/>
+						<ImagePreview />
+					</>
 				)}
 				<div className="create-post__footer  gap__x16">
 					<span>Add to your post</span>
@@ -51,7 +60,13 @@ export default function CreatePostPopup({ user }) {
 								setPicker((prev) => !prev);
 							}}
 						/>
-						<img src={homeImages.photo_video} alt="add media" />
+						<img
+							src={homeImages.photo_video}
+							alt="add media"
+							onClick={() => {
+								setShowImgPrev((prev) => !prev);
+							}}
+						/>
 						<img src={homeImages.live_coding} alt="live coding" />
 						<img src={homeImages.pin_icon} alt="local pin" />
 						<img src={homeImages.professional} alt="professional_achievment" />
@@ -64,6 +79,7 @@ export default function CreatePostPopup({ user }) {
 						</div>
 					</div>
 				)}
+				<button className="button-purple">SUBMIT</button>
 			</div>
 		</div>
 	);

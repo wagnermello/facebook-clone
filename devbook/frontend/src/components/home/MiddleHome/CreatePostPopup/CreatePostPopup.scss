@@ -1,0 +1,210 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/scale-function";
+
+.white-blur {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.8);
+	z-index: 99;
+	width: 100vw !important;
+	height: 100vh !important;
+	border-radius: 0;
+}
+.create-post {
+	.create-post__container {
+		background-color: $dark-purple-1;
+		@include scaleWidth(440px, 1280px);
+		height: auto;
+		@include scaleBorderRadius(0.5rem, 1280px);
+		@include scalePadding(1rem, 1rem, 1rem, 1rem, 1280px);
+
+		.create-post__header {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			h2 {
+				color: $white-color;
+			}
+
+			img {
+				@include scaleWidth(1rem, 1280px);
+			}
+		}
+		.create-post__splitter {
+		}
+		.create-post__profile {
+			img {
+				border-radius: 50%;
+				@include scaleWidth(2rem, 1280px);
+			}
+			span {
+				color: $white-color;
+				font-weight: 600;
+				@include scaleFontSize(1rem, 1280px);
+			}
+		}
+		.create-post__text-area {
+			width: 100%;
+			height: 100%;
+			textarea {
+				width: 100%;
+				height: auto;
+				@include scaleBorderRadius(0.5rem, 1280px);
+				@include scalePadding(1rem, 1rem, 1rem, 1rem, 1280px);
+				color: $dark-purple-1;
+				resize: none;
+
+				&::placeholder {
+					@include scaleFontSize(1rem, 1280px);
+					font-family: "Montserrat", 1280px;
+					color: $light-gray;
+				}
+
+				&:focus {
+					border: 0px transparent;
+				}
+			}
+		}
+
+		.create-post__footer {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
+
+			span {
+				@include scaleFontSize(0.875rem, 1280px);
+				color: $white-color;
+				font-weight: 400;
+			}
+
+			img {
+				cursor: pointer;
+				@include scaleWidth(1rem, 1280px);
+			}
+		}
+
+		/*-----EMOJI-PICKER-----*/
+
+		.create-post__emojis {
+			display: flex;
+			@include scaleWidth(240px, 1280px);
+			@include scaleHeight(160px, 1280px);
+
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: absolute !important;
+			@include scaleMargin(-1rem, 0, 0, 4rem, 1280px);
+			transition: all 0.1s ease-in-out;
+			animation: up 0.2s ease-in-out;
+
+			.emoji-picker {
+				transform: scale(0.8);
+				li {
+					img {
+						@include scaleWidth(2rem, 1280px);
+						@include scaleHeight(2rem, 1280px);
+					}
+				}
+			}
+
+			.emoji-picker-react {
+				@include scaleFontSize(1rem, 1280px);
+			}
+
+			.emoji-picker-react ul {
+				clear: both;
+				@include scalePadding(1rem, 1rem, 1rem, 1rem, 1280px);
+
+				list-style: none;
+				margin: 0 auto;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+			}
+			aside.emoji-picker-react {
+				background: #fff;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				font-family: "Montserrat", sans-serif;
+				border: none;
+				@include scaleBorderRadius(0.5rem, 1280px);
+				box-sizing: border-box;
+				box-shadow: none;
+				overflow: hidden;
+				position: relative;
+			}
+
+			.emoji-picker-react .emoji-categories button {
+				@include scaleHeight(40px, 1280px);
+				@include scaleWidth(32px, 1280px);
+				@include scalePadding(0.25rem, 0, 0.25rem, 0rem, 1280px);
+				background-repeat: no-repeat;
+				@include scaleBackgroundSize(1rem, 1280px);
+				background-position: 50% 50%;
+				cursor: pointer;
+				opacity: 0.5;
+				transition: opacity 0.1s;
+			}
+
+			.emoji-picker-react input.emoji-search {
+				width: 85%;
+				outline: none;
+				box-shadow: none;
+				@include scaleMargin(0, 0.15rem, 0, 0, 1280px);
+				@include scalePadding(0.25rem, 0.25rem, 0.875rem, 0.25rem, 1280px);
+				box-sizing: border-box;
+				border: 1px solid #efefef;
+				transition: border 0.1s;
+				@include scaleBorderRadius(0.5rem, 1280px);
+			}
+			.emoji-picker-react div.skin-tones-list button {
+				@include scaleHeight(0.5rem, 1280px);
+				@include scaleWidth(0.5rem, 1280px);
+				transform: scale(1);
+				padding: 0 !important;
+				@include scaleMargin(0, 2rem, 0, 0, 1280px);
+				display: block;
+				padding: 0;
+			}
+			.emoji-picker-react .emoji-group:before {
+				content: attr(data-display-name);
+				color: #aaa;
+				@include scaleFontSize(0.875rem, 1280px);
+				position: sticky;
+				background: rgba(255, 255, 255, 0.95);
+				width: 100%;
+				z-index: 1;
+				top: 0;
+				text-transform: uppercase;
+				@include scaleLineHeight(2rem, 1280px);
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+@keyframes up {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+		transform: translateY(50px);
+	}
+	50% {
+		opacity: 0.5;
+		transform: scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+		transform: translateY(0px);
+	}
+}
